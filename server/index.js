@@ -5,15 +5,14 @@ const app = express();
 const router = require('./routes');
 const port = 3000;
 const request = require('request');
-const passport = require('passport');
 const cors = require('cors');
 const logger = require('morgan')
 require('babel-register');
 require('babel-polyfill');
-require('../database/config/index');
 
 
-app.use(logger('tiny'))
+
+logger('tiny');
 // body-parser
 app.use(
   cors({

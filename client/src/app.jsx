@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import {Parallax} from 'react-spring'
 import './App.scss'
+import Copy from './text.js'
 
 const Page = ({
   offset,
@@ -20,17 +21,18 @@ const Page = ({
   </Parallax.Layer>
 
   <Parallax.Layer className="text number" offset={offset} speed={0.3}>
-    <span>0{offset + 1}</span>
+    <span>{offset + 1}</span>
   </Parallax.Layer>
 
   <Parallax.Layer className="text header" offset={offset} speed={0.4}>
     <span>
       <p style={{
-          fontSize: 20
+          fontSize: "calc(5vw + 10%)"
         }}>{caption}</p>
       <div className={`stripe ${gradient}`}/>
       <p>{first}</p>
       <p>{second}</p>
+
     </span>
   </Parallax.Layer>
 </React.Fragment>)
@@ -47,10 +49,10 @@ export default class App extends React.Component {
   }
 
   render() {
-    return (<Parallax className="container" ref="parallax" pages={3} horizontal="horizontal" scrolling={false}>
-      <Page offset={0} gradient="pink" caption="who we are" first="Lorem ipsum" second="dolor sit" onClick={() => this.scroll(1)}/>
-      <Page offset={1} gradient="teal" caption="what we do" first="consectetur" second="adipiscing elit" onClick={() => this.scroll(2)}/>
-      <Page offset={2} gradient="tomato" caption="what we want" first="Morbi quis" second="est dignissim" onClick={() => this.scroll(0)}/>
+    return (<Parallax className="container" ref="parallax" pages={3} vertical="vertical" scrolling={true}>
+      <Page offset={0} gradient="black" caption="Michael is..." first="Michael is a polymath" second="dolor sit" onClick={() => this.scroll(1)}/>
+      <Page offset={1} gradient="greyf" caption="Media" first="a" second="adipiscing elit" onClick={() => this.scroll(2)}/>
+      <Page offset={2} gradient="black" caption="Repos" first="Morbi quis" second="est dignissim" onClick={() => this.scroll(0)}/>
     </Parallax>)
   }
 }

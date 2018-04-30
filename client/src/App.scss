@@ -9,12 +9,12 @@
   justify-content: start !important;
   font-family: 'Kanit', sans-serif;
   line-height: 0px;
-  text-transform: uppercase;
+
 }
 
 .number {
   font-size: 450px;
-  color: #373c4c;
+  color: black;
 }
 
 .number span {
@@ -25,8 +25,8 @@
 
 .header {
   margin-left: 350px;
-  font-size: 70px;
-  color: white;
+  font-size: calc(15px + 20%);
+  color: black;
 }
 
 .stripe {
@@ -35,12 +35,12 @@
 }
 
 .slopeBegin {
-  background-color: black;
-  clip-path: polygon(20vw 0, 70% 0, calc(70% - 20vw) 100%, 0 100%);
+  background-color: white;
+clip-path: polygon(76% 0, 100% 0%, 75% 100%, 47% 100%);
 }
 
 .slopeEnd {
-  clip-path: polygon(70% 0, 100% 0, calc(100% - 20vw) 100%, calc(70% - 20vw) 100%);
+clip-path: polygon(96% 6%, 100% 0%, 75% 100%, 0% 100%);
 }
 
 .slopeBegin,
@@ -51,14 +51,15 @@
   cursor: pointer;
 }
 
-.pink {
-  background: linear-gradient(to right, deeppink 0%, coral 100%);
+.black {
+  background: black;
 }
 
 .teal {
-  background: linear-gradient(to right, SlateBlue 0%, DeepSkyBlue 100%);
+  background: linear-gradient(to right, teal 0%, white 100%);
+  opacity: .75;
 }
 
-.tomato {
-  background: linear-gradient(to right, tomato 0%, gold 100%);
+.greyf {
+  background: linear-gradient(to right, black 0%, grey 100%);
 }

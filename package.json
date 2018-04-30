@@ -1,0 +1,38 @@
+{
+  "name": "Red_Diamonds_com",
+  "version": "1.0.0",
+  "description": "portfolio for me",
+  "main": "index.js",
+  "repository": "https://github.com/michaelwachell/twoRedDiamonds.git",
+  "author": "Michael Wachell",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "react-dev": "webpack -w --mode development",
+    "react-prod": "webpack -w --mode production",
+    "start": "nodemon ./server/index.js"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "http": "^0.0.0",
+    "jest": "^22.4.3",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.17.3",
+    "path": "^0.12.7",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-particles-js": "^2.1.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "webpack": "^4.6.0"
+  }
+}

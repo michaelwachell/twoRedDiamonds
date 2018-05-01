@@ -21,15 +21,16 @@ module.exports = {
         include: SRC_DIR,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: 'babel-loader'
         }
 
-      },
-      {
+      }, {
         test: /\.scss$/,
         loaders: ['style-loader', 'css-loader', 'sass-loader']
       },
-      {
+      devServer: {
+        historyApiFallback: true
+      }, {
         test: /\.(png|jpg|gif)$/,
         use: [
           {
@@ -41,5 +42,5 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx']
-  },
+  }
 };

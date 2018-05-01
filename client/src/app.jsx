@@ -49,10 +49,10 @@ export default class App extends React.Component {
   }
 
   render() {
-    return (<Parallax className="container" ref="parallax" pages={3} vertical="vertical" scrolling={true}>
-      <Page offset={0} gradient="black" caption="Michael is..." first="Michael is a polymath" second="dolor sit" onClick={() => this.scroll(1)}/>
+    return (<Parallax className="container" ref="parallax" pages={3} horizontal="horizontal" scrolling={true}>
+      <Page offset={0} gradient="greyf" caption="Michael is..." first="Michael is a polymath" second="dolor sit" onClick={() => this.scroll(1)}/>
       <Page offset={1} gradient="greyf" caption="Media" first="a" second="adipiscing elit" onClick={() => this.scroll(2)}/>
-      <Page offset={2} gradient="black" caption="Repos" first="Morbi quis" second="est dignissim" onClick={() => this.scroll(0)}/>
+      <Page offset={2} gradient="greyf" caption="Repos" first="Morbi quis" second="est dignissim" onClick={() => this.scroll(0)}/>
     </Parallax>)
   }
 }

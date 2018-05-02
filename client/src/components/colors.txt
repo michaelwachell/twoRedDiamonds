@@ -1,0 +1,7 @@
+
+
+#005f89 - dark blue
+#0093b7 - ocean blue
+#a0c5cf - stone blue
+#e6eceb - palette grey
+#63cdd7 - hard cyan 

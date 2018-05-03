@@ -8,6 +8,7 @@ import Development from './Development.jsx';
 import Intro from './Intro.jsx';
 import Media from './Media.jsx';
 import Contact from './Contact.jsx';
+import './App.scss';
 
 export default class App extends Component {
 

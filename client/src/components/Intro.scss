@@ -24,7 +24,7 @@
 }
 
 .header {
-  margin-left: 350px;
+  margin-left: 4vw;
   font-size: calc(15px + 20%);
   color: white;
 }
@@ -64,14 +64,15 @@
   background: linear-gradient(to right, #a0c5cf 0%, #e6eceb 100%);
 }
 
-.media-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 2fr);
-  grid-gap: 8px;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  img {
-    width: 10vw;
-  }
+
+.images {
+  margin-left: 50%;
+  width: 45%;
+  height: auto;
+  display: block;
+}
+
+.image-container{
+  width: 300px;
+  height: auto;
 }

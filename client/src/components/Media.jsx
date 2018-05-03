@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import './Media.scss';
 
+import './App.scss'
 
 import {Component} from 'react'
 
@@ -16,6 +16,30 @@ export default class Media extends Component {
 
   render() {
     return (<div className="media-grid">
+   <div>
+   <img src="https://i.imgur.com/VhBmLIk.jpg" />
+   </div>
+   <div>
+   <img src="https://i.imgur.com/VhBmLIk.jpg" />
+   </div>
+   <div>
+   <img src="https://i.imgur.com/VhBmLIk.jpg" />
+   </div>
+   <div>
+   <img src="https://i.imgur.com/VhBmLIk.jpg" />
+   </div>
+   <div>
+   <img src="https://i.imgur.com/VhBmLIk.jpg" />
+   </div>
+   <div>
+   <img src="https://i.imgur.com/VhBmLIk.jpg" />
+   </div>
+   <div>
+   <img src="https://i.imgur.com/VhBmLIk.jpg" />
+   </div>
+   <div>
+   <img src="https://i.imgur.com/VhBmLIk.jpg" />
+   </div>
    <div>
    <img src="https://i.imgur.com/VhBmLIk.jpg" />
    </div>

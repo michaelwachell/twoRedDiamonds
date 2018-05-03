@@ -28,9 +28,7 @@ module.exports = {
         test: /\.scss$/,
         loaders: ['style-loader', 'css-loader', 'sass-loader']
       },
-      devServer: {
-        historyApiFallback: true
-      }, {
+       {
         test: /\.(png|jpg|gif)$/,
         use: [
           {

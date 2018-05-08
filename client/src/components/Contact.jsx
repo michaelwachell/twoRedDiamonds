@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import {Component} from 'react';
 import './Contact.scss';
+import axios from 'axios';
 
 
 export default class Contact extends Component {
@@ -18,7 +19,12 @@ export default class Contact extends Component {
   }
 
 sendMe() {
-window.open(`mailto:${this.state.email}?subject=${this.state.subject}&body=${this.state.body}`)
+
+axios.post('/email')
+
+
+
+// window.open(`mailto:${this.state.email}?subject=${this.state.subject}&body=${this.state.body}`)
 }
 
 

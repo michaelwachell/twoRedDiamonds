@@ -20,7 +20,14 @@ export default class Contact extends Component {
 
 sendMe() {
 
-axios.post('/email')
+axios.post('/contact', { from: this.state.email, name: this.state.name, body: this.state.body})
+  .then((res, err)=> {
+    console.log(res,'<--response')
+      err ? console.log(err, 'here is the error on contact') : null;
+  }
+
+)
+
 
 
 

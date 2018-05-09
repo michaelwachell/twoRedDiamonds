@@ -1,5 +1,3 @@
-const router = require('express').Router();
-const path = require('path');
 const environment = require('../environment.js');
 
 const CONTACT_ADDRESS = 'wachell@gmail.com';
@@ -13,7 +11,6 @@ var mailer = require('nodemailer').createTransport({
 });
 
 router.post('/contact', (req, res) => {
-  console.log('here is req.body', req.body)
   mailer.sendMail({
     from: req.body.from,
     to: [CONTACT_ADDRESS],
@@ -25,13 +22,3 @@ router.post('/contact', (req, res) => {
     res.json({success: true});
   })
 });
-
-router.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/public/'), function(err) {
-    if (err) {
-      res.status(500).send(err)
-    }
-  })
-})
-
-module.exports = router

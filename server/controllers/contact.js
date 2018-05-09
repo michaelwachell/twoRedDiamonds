@@ -1,24 +1,29 @@
-const environment = require('../environment.js');
+const environment = require('../../environment.js');
 
 const CONTACT_ADDRESS = 'wachell@gmail.com';
 
 var mailer = require('nodemailer').createTransport({
-  service: 'AOL',
+  service: 'Gmail',
   auth: {
     user: environment.email,
     pass: environment.password
   }
 });
 
-router.post('/contact', (req, res) => {
+const mailMan = (req, res) => {
+  console.log('here is req.body', req.body)
   mailer.sendMail({
     from: req.body.from,
     to: [CONTACT_ADDRESS],
     subject: `TWOREDDIAMONDS ${req.body.from}`,
     html: req.body.message || '[No message]'
   }, (err, info) => {
-    if (err)
+    if (err) {
       return res.status(500).send(err);
+    } else {
     res.json({success: true});
+  }
   })
-});
+};
+
+module.exports = {mailMan}

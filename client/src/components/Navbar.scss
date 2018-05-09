@@ -9,8 +9,10 @@
 
 #twoRedLogo {
   width: 100%;
+  max-width: 70%;
+  min-width: 35%;
   height: auto;
-  max-width: 50%;
+
   display : flex;
   align-items : center;
   margin-left: .5em;

@@ -6,7 +6,7 @@ var DIST_DIR = path.join(__dirname, 'client/public');
 
 module.exports = {
 
-  entry: `${SRC_DIR}/index.js`,
+  entry: ['babel-polyfill', `${SRC_DIR}/index.js`],
   output: {
     path: DIST_DIR,
     publicPath: '/',

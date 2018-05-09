@@ -7,10 +7,9 @@ const port = 3000;
 const request = require('request');
 const cors = require('cors');
 const logger = require('morgan')
-require('babel-register');
-require('babel-polyfill');
 
-
+require("babel-core/register");
+require("babel-polyfill")
 
 logger('tiny');
 // body-parser

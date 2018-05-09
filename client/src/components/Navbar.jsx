@@ -18,12 +18,7 @@ const Navbar = (props) => {
     </div>
     <div className="siteLink">
       <Link to="/media">
-        <a>Media</a>
-      </Link>
-    </div>
-    <div className="siteLink">
-      <Link to="/development">
-        <a>Development</a>
+        <a>Portfolio</a>
       </Link>
     </div>
     <div className="siteLink">

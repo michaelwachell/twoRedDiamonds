@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import {Component} from 'react';
 import './Contact.scss';
+import axios from 'axios';
 
 
 export default class Contact extends Component {
@@ -12,13 +13,27 @@ export default class Contact extends Component {
     this.state = {
       email: '',
       name: '',
-      body: ''
+      message: '',
+      sent: false
     }
 
   }
 
 sendMe() {
-window.open(`mailto:${this.state.email}?subject=${this.state.subject}&body=${this.state.body}`)
+
+axios.post('/contact', { from: this.state.email, name: this.state.name, message: this.state.message})
+  .then((res, err)=> {
+    console.log(res,'<--response')
+      this.setState({sent: true})
+      err ? console.log(err, 'here is the error on contact') : null;
+  }
+
+)
+
+
+
+
+// window.open(`mailto:${this.state.email}?subject=${this.state.subject}&message=${this.state.message}`)
 }
 
 
@@ -26,6 +41,9 @@ window.open(`mailto:${this.state.email}?subject=${this.state.subject}&body=${thi
     return (
 
     <div id="contactBG">
+
+
+
       <div id="form-main" class="fadeInLeftBig">
         <div id="form-div">
           <form class="form" id="form1">
@@ -39,7 +57,7 @@ window.open(`mailto:${this.state.email}?subject=${this.state.subject}&body=${thi
             </p>
 
             <p class="text">
-              <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment" onChange={(e)=> this.setState({ body: e.target.value})}></textarea>
+              <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment" onChange={(e)=> this.setState({ message: e.target.value})}></textarea>
             </p>
 
 
@@ -49,6 +67,7 @@ window.open(`mailto:${this.state.email}?subject=${this.state.subject}&body=${thi
             </div>
           </form>
         </div>
+           {this.sent ? <h2>It's away! Thanks for reaching out </h2> : null}
         </div>
 
         </div>

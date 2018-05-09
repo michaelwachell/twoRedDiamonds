@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 
-import './App.scss'
-
+import './App.scss';
+import './Media.scss';
 import {Component} from 'react'
 
 export default class Media extends Component {
@@ -15,40 +15,20 @@ export default class Media extends Component {
   }
 
   render() {
-    return (<div className="media-grid">
+    return (<div className="media-grid portfolio">
    <div>
-   <img src="https://i.imgur.com/VhBmLIk.jpg" />
+  <p> check out this wicke proj </p>
    </div>
    <div>
    <img src="https://i.imgur.com/VhBmLIk.jpg" />
    </div>
    <div>
-   <img src="https://i.imgur.com/VhBmLIk.jpg" />
+  <p> back again with that proj</p>
    </div>
    <div>
    <img src="https://i.imgur.com/VhBmLIk.jpg" />
    </div>
-   <div>
-   <img src="https://i.imgur.com/VhBmLIk.jpg" />
-   </div>
-   <div>
-   <img src="https://i.imgur.com/VhBmLIk.jpg" />
-   </div>
-   <div>
-   <img src="https://i.imgur.com/VhBmLIk.jpg" />
-   </div>
-   <div>
-   <img src="https://i.imgur.com/VhBmLIk.jpg" />
-   </div>
-   <div>
-   <img src="https://i.imgur.com/VhBmLIk.jpg" />
-   </div>
-   <div>
-   <img src="https://i.imgur.com/VhBmLIk.jpg" />
-   </div>
-   <div>
-   <img src="https://i.imgur.com/VhBmLIk.jpg" />
-   </div>
+
 
 
     </div>)

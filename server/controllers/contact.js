@@ -15,8 +15,8 @@ const mailMan = (req, res) => {
   mailer.sendMail({
     from: req.body.from,
     to: [CONTACT_ADDRESS],
-    subject: `TWOREDDIAMONDS ${req.body.from}`,
-    html: req.body.message || '[No message]'
+    subject: `TWOREDDIAMONDS ${req.body.name}`,
+    html: `${req.body.message} || THIS WAS FROM: ${req.body.from}` || '[No message]'
   }, (err, info) => {
     if (err) {
       return res.status(500).send(err);

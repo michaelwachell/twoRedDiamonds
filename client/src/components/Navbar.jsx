@@ -13,14 +13,15 @@ const Navbar = (props) => {
   <div> <img id="twoRedLogo" src="https://ci3.googleusercontent.com/proxy/UQYUMcXxWzW23Yu4YSPrmP3Pg_o8qMgSentObNcPCSoaVRPAVGEzjDN_XBdOMw08zFI2Kg=s0-d-e1-ft#http://i.imgur.com/eIqamb8.jpg"/> </div>
     <div className="siteLink">
       <Link to="/">
-        <a>Intro</a>
+        <a>Hello</a>
       </Link>
     </div>
-    <div className="siteLink">
-      <Link to="/media">
-        <a>Portfolio</a>
-      </Link>
-    </div>
+  {  // <div className="siteLink">
+    //   <Link to="/media">
+    //     <a>Portfolio</a>
+    //   </Link>
+    // </div>
+  }
     <div className="siteLink">
       <Link to="/contact">
         <a>Contact</a>

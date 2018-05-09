@@ -26,7 +26,7 @@
 .header {
   margin-left: 4vw;
   font-size: calc(15px + 20%);
-  color: white;
+  color: 	#f9f9f9;
 }
 
 .stripe {
@@ -61,7 +61,7 @@
 }
 
 .greyf {
-  background: linear-gradient(to right, #a0c5cf 0%, #e6eceb 100%);
+  background: linear-gradient(to bottom, #a0c5cf 60%, #e6eceb 100%);
 }
 
 
@@ -70,7 +70,21 @@
   width: 45%;
   height: auto;
   display: block;
+  z-index: 1000000 !important;
 }
+
+.portrait {
+ min-width: 10%;
+  width: 45%;
+  margin-right: 22%;
+  margin-bottom: 5%;
+  height: auto;
+  display: block;
+  z-index: 1000000 !important;
+
+}
+
+
 
 .image-container{
   width: 300px;

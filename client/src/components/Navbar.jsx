@@ -16,11 +16,12 @@ const Navbar = (props) => {
         <a>Hello</a>
       </Link>
     </div>
-  {  // <div className="siteLink">
-    //   <Link to="/media">
-    //     <a>Portfolio</a>
-    //   </Link>
-    // </div>
+  {
+    <div className="siteLink">
+      <Link to="/media">
+        <a>Portfolio</a>
+      </Link>
+    </div>
   }
     <div className="siteLink">
       <Link to="/contact">

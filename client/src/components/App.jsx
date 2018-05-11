@@ -23,6 +23,7 @@ export default class App extends Component {
     <Router>
     <Fragment>
         <Navbar />
+        
         <Route exact="exact" path="/" component={Intro}/>
         <Route path="/media" component={Media}/>
         <Route path="/development" component={Development}/>

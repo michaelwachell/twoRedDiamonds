@@ -61,8 +61,8 @@ export default class Contact extends Component {
         </div>
         {
           this.sent
-            ? <h2>It's away! Thanks for reaching out
-              </h2>
+            ? (<h2>It's away! Thanks for reaching out
+              </h2>)
             : null
         }
         </div>

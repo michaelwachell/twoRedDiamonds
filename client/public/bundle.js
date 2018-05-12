@@ -4367,7 +4367,7 @@ eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/c
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \".portfolio {\\n  margin: 10% 0 20% 0 !important; }\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./client/src/components/Media.scss?./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js");
+eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \".portfolio {\\n  margin: 10% 0 20% 0 !important; }\\n\\n.caption {\\n  vertical-align: middle; }\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./client/src/components/Media.scss?./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js");
 
 /***/ }),
 

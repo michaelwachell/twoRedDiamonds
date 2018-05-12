@@ -27,13 +27,14 @@
 }
 
 [class^='imghvr-'] > img, [class*=' imghvr-'] > img {
-    vertical-align: top;
+    vertical-align: middle;
     max-width: 100%;
 }
 
 [class^='imghvr-'] figcaption, [class*=' imghvr-'] figcaption {
     background-color: #6d777e;
-    padding: 30px;
+        vertical-align: middle;
+    padding: 4%;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -44,6 +45,7 @@
 
 [class^='imghvr-'] figcaption h1, [class^='imghvr-'] figcaption h2, [class^='imghvr-'] figcaption h3, [class^='imghvr-'] figcaption h4, [class^='imghvr-'] figcaption h5, [class^='imghvr-'] figcaption h6, [class*=' imghvr-'] figcaption h1, [class*=' imghvr-'] figcaption h2, [class*=' imghvr-'] figcaption h3, [class*=' imghvr-'] figcaption h4, [class*=' imghvr-'] figcaption h5, [class*=' imghvr-'] figcaption h6 {
     color: #ffffff;
+        vertical-align: middle;
 }
 
 [class^='imghvr-'] a, [class*=' imghvr-'] a {

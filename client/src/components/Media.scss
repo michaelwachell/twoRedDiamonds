@@ -1,7 +1,104 @@
-.portfolio{
-margin: 10% 0 20% 0 !important;
+.container {
+	background: radial-gradient(closest-side, transparent, #a0c5cf);
 }
 
-.caption {
-	    vertical-align: middle;
-}
+
+.container > div > div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .text {
+	pointer-events: none;
+	justify-content: start !important;
+	font-family: 'Kanit', sans-serif;
+	line-height: 0px;
+  
+  }
+  
+  .number {
+	font-size: 450px;
+	color:  #a8a8a8;
+  }
+  
+  .number span {
+	display: inline-block;
+	position: relative;
+	transform: translate3d(-35%, 0, 0);
+  }
+  
+  .headerm {
+	margin-left: 20%;
+	font-size: calc(45px + 20%);
+	color:  black;
+  }
+  
+  .stripe {
+	height: 2px;
+	width: auto;
+  }
+  
+  .circBegin {
+	background-color: #0093b7;
+	clip-path: circle(40%);
+  }
+  
+  .circEnd {
+	clip-path: circle(30%);
+  }
+  
+  .circBegin{
+	width: 140%;
+	height: 100%;
+	cursor: pointer;
+	margin-left: 40%;
+  }
+  .circEnd {
+    
+	width: 140%;
+	height: 100%;
+	margin-left: 20%;
+	cursor: pointer;
+  }
+  
+  .black {
+	background: #005f89;
+  }
+  
+  .teal {
+	background: linear-gradient(to right, #0093b7 0%, #63cdd7 100%);
+	opacity: .75;
+  }
+  
+  .greyf {
+	background: linear-gradient(to bottom, #a0c5cf 60%, #e6eceb 100%);
+  }
+  
+  
+  .images {
+	margin-left: 50%;
+	width: 45%;
+	height: auto;
+	display: block;
+	z-index: 1000000 !important;
+  }
+  
+  .portrait {
+   min-width: 10%;
+	width: 45%;
+	margin-right: 22%;
+	margin-bottom: 5%;
+	height: auto;
+	display: block;
+	z-index: 1000000 !important;
+  
+  }
+  
+  
+  
+  .image-container{
+	width: 300px;
+	height: auto;
+  }
+  

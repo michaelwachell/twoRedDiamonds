@@ -1,69 +1,81 @@
-import React from 'react';
-import ReactDom from 'react-dom';
+import React, {Component} from 'react'
+import ReactDOM from 'react-dom'
+import {Parallax} from 'react-spring'
+import './Media.scss'
+import Copy from './text.js'
+import Images from './Images.js'
+import Dep from '../../../Assets/coding_things.png'
 import Spot from '../../../Assets/spotifight.png'
-// http://imagehover.io/#download
-import './App.scss';
-import './Media.scss';
-import {Component} from 'react'
+import Media from '../../../Assets/media_things.png'
 
-export default class Media extends Component {
+const Page = ({
+  offset,
+  caption,
+  first,
+  second,
+  gradient,
+  images,
+  onClick
+}) => { return (
+  <React.Fragment className="media-back">
+  <Parallax.Layer offset={offset} speed={0.2} onClick={onClick}>
+    <div className="circBegin"/>
+  </Parallax.Layer>
 
-  constructor(props) {
-    super(props)
 
+  <Parallax.Layer offset={offset} speed={-0.2} onClick={onClick}>
+    <div className={`circEnd ${gradient}`}/>
+  </Parallax.Layer>
+
+
+
+  <Parallax.Layer className="text headerm" offset={offset} speed={0.4}>
+
+      <div>
+      <p style={{
+          fontSize: "calc(3vw + 10%)"
+        }}>{caption}</p>
+
+      <p style={{
+          fontSize: "calc(1vw + 10%)"
+        }}>{first} </p>
+    </div>
+    <div>
+
+      </div>
+
+  </Parallax.Layer>
+
+
+  <Parallax.Layer className="image-container" offset={offset} speed={0.8} onClick={onClick}>
+  {
+  images ? (<div className="images"><img width="80%" src={images}/></div>) :  null
+  }
+
+
+  </Parallax.Layer>
+
+</React.Fragment>
+
+)}
+
+export default class Intro extends Component {
+
+  constructor() {
+    super()
     this.state = {}
+  }
 
+  scroll(to) {
+    this.refs.parallax.scrollTo(to)
   }
 
   render() {
-    return (<div className="media-container">
-
-      <div className="media-grid">
-
-        <div>
-          <h1>
-            Spotifight.us
-          </h1>
-       
-        </div>
-        <div className="folio-img">
-          <figure class="imghvr-flip-vert">
-            <img src={Spot} />
-              <figcaption>
-                <h2>Pick a song and battle your friends in multiplayer minigames created with Socket.io. Emerge the victor, and your song is played. </h2>
-              </figcaption>
-                  <a href="http://www.spotifight.us" target="_blank"></a>
-            </figure>
-
-          </div>
-
-          <div>
-           <h1>
-            The Neverending Symphony
-          </h1>
-       
-          </div>
-          <div className="folio-img">
-           <figure class="imghvr-flip-vert">
-            <img width="50%" src="http://static.tumblr.com/8c14a29a5ad49be881e2f9b3560247cd/bxckkmi/azdnea1cp/tumblr_static_cchzs14wpvwokggoowcs48s00.png" />
-              <figcaption>
-                <h2>The Never-Ending Symphony is a musical patchwork that has a beginning but no end. Each week a minute is added by one of our members or a guest. </h2>
-              </figcaption>
-                  <a href="http://www.theneverendingsymphony.com" target="_blank"></a>
-            </figure>
-          </div>
-          <div className="folio-img">
-          <div>
-          <h1>
-            Composition
-          </h1>
-       
-        </div>
-          <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/70553065&color=%23090706&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-          </div>
-
-        </div>
-
-      </div>)
+    return (<Parallax className="container" ref="parallax" pages={4} vertical="vertical" scrolling={true}>
+      <Page offset={0} gradient="teal" className="roundMe" images={Spot} caption="Hi!" first="My name is Michael..." second="*click or tap*" onClick={() => this.scroll(1)}/>
+      <Page offset={1} gradient="greyf" caption="I am a media polymath" first="" second="" onClick={() => this.scroll(2)}/>
+      <Page offset={2} gradient="black" images={Dep} caption="I create..." first="the web using these tools" second="" onClick={() => this.scroll(3)}/>
+      <Page offset={3} gradient="teal" images={Media} caption="I create..." first="media using these tools" second="" onClick={() => this.scroll(0)}/>
+    </Parallax>)
   }
 }

@@ -2,11 +2,13 @@ import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 import {Parallax} from 'react-spring'
 import './Media.scss'
-import Copy from './text.js'
+import Copy from './text.jsx'
 import Images from './Images.js'
 import Dep from '../../../Assets/coding_things.png'
 import Spot from '../../../Assets/spotifight.png'
 import Media from '../../../Assets/media_things.png'
+
+const spotCopy = ""
 
 const Page = ({
   offset,
@@ -29,20 +31,26 @@ const Page = ({
 
 
 
-  <Parallax.Layer className="text headerm" offset={offset} speed={0.4}>
-
-      <div>
-      <p style={{
-          fontSize: "calc(3vw + 10%)"
-        }}>{caption}</p>
-
-      <p style={{
-          fontSize: "calc(1vw + 10%)"
-        }}>{first} </p>
-    </div>
-    <div>
-
-      </div>
+  <Parallax.Layer className="text headerm wrapword" offset={offset} speed={0.4}>
+      <text>
+      <table className="text headerm wrapword" height="300px">
+       
+        <tr>
+            <td>
+              <p  style={{fontSize: "calc(3vw + 10%)"}}>{caption}</p>
+            </td>
+        </tr>
+        
+           
+         <tr>
+            <td height="100px">
+              <p  style={{fontSize: "calc(1vw + 10%)"}}>{first} </p>
+            </td>
+        </tr>
+          
+        </table>
+      </text>ß
+   
 
   </Parallax.Layer>
 
@@ -72,10 +80,10 @@ export default class Intro extends Component {
 
   render() {
     return (<Parallax className="container" ref="parallax" pages={4} vertical="vertical" scrolling={true}>
-      <Page offset={0} gradient="teal" className="roundMe" images={Spot} caption="Hi!" first="My name is Michael..." second="*click or tap*" onClick={() => this.scroll(1)}/>
-      <Page offset={1} gradient="greyf" caption="I am a media polymath" first="" second="" onClick={() => this.scroll(2)}/>
-      <Page offset={2} gradient="black" images={Dep} caption="I create..." first="the web using these tools" second="" onClick={() => this.scroll(3)}/>
-      <Page offset={3} gradient="teal" images={Media} caption="I create..." first="media using these tools" second="" onClick={() => this.scroll(0)}/>
+      <Page offset={0} gradient="teal" className="roundMe" images={Spot} caption="Spotifight.us" first={Copy.Spotifight()} second="*click or tap*" onClick={() => this.scroll(1)}/>
+      <Page offset={1} gradient="greyf" caption="Composition" first={Copy.TNES()} second="" onClick={() => this.scroll(2)}/>
+      <Page offset={2} gradient="black" images={Dep} caption="Visual" first="design stuff" second="" onClick={() => this.scroll(3)}/>
+      <Page offset={3} gradient="teal" images={Media} caption="lwnmwr" first="coming soon..." second="" onClick={() => this.scroll(0)}/>
     </Parallax>)
   }
 }

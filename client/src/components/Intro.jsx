@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 import {Parallax} from 'react-spring'
 import './Intro.scss'
-import Copy from './text.js'
+
 import Images from './Images.js'
 import Dep from '../../../Assets/coding_things.png'
 import Me from '../../../Assets/me2.png'
@@ -38,6 +38,7 @@ const Page = ({
   <Parallax.Layer className="text header" offset={offset} speed={0.4}>
 
       <div>
+        
       <p style={{
           fontSize: "calc(8vw + 10%)"
         }}>{caption}</p>

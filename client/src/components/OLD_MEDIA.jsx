@@ -30,7 +30,7 @@ export default class Media extends Component {
           <figure class="imghvr-flip-vert">
             <img src={Spot} />
               <figcaption>
-                <h2>Pick a song and battle your friends in multiplayer minigames created with Socket.io. Emerge the victor, and your song is played. </h2>
+                <h2>a </h2>
               </figcaption>
                   <a href="http://www.spotifight.us" target="_blank"></a>
             </figure>

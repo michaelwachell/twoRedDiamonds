@@ -9,11 +9,30 @@
 	justify-content: center;
   }
   
+  .wrapword {
+    white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    white-space: pre-wrap;       /* css-3 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    white-space: -webkit-pre-wrap; /* Newer versions of Chrome/Safari*/
+    word-break: break-all;
+    white-space: normal;
+}
+
   .text {
 	pointer-events: none;
 	justify-content: start !important;
 	font-family: 'Kanit', sans-serif;
 	line-height: 0px;
+	max-width: 300px;
+	width: 100%;
+	overflow-wrap: break-word;
+	min-height: 300px;
+	max-height: 400px;
+	overflow: auto;
+
+	
   
   }
   

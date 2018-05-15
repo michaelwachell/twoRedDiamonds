@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import {Component} from 'react'
+import { Component } from 'react'
 
 export default class Development extends Component {
 
@@ -13,8 +13,7 @@ export default class Development extends Component {
 
   render() {
     return (<div>
-
-     Development
+      Development
     </div>)
   }
 }

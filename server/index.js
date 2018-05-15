@@ -21,7 +21,9 @@ app.use(
 );
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
 // serve static assets
 app.use(express.static(path.join(__dirname, '../client/public/')));

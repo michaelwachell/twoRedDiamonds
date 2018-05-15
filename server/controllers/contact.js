@@ -21,9 +21,13 @@ const mailMan = (req, res) => {
     if (err) {
       return res.status(500).send(err);
     } else {
-    res.json({success: true});
-  }
+      res.json({
+        success: true
+      });
+    }
   })
 };
 
-module.exports = {mailMan}
+module.exports = {
+  mailMan
+}

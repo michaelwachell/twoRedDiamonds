@@ -1,4 +1,4 @@
-.container > div > div {
+.container>div>div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,12 +9,11 @@
   justify-content: start !important;
   font-family: 'Kanit', sans-serif;
   line-height: 0px;
-
 }
 
 .number {
   font-size: 450px;
-  color:  #a8a8a8;
+  color: #a8a8a8;
 }
 
 .number span {
@@ -26,7 +25,7 @@
 .header {
   margin-left: 4vw;
   font-size: calc(15px + 20%);
-  color: 	#f9f9f9;
+  color: #f9f9f9;
 }
 
 .stripe {
@@ -64,7 +63,6 @@
   background: linear-gradient(to bottom, #a0c5cf 60%, #e6eceb 100%);
 }
 
-
 .images {
   margin-left: 50%;
   width: 45%;
@@ -74,19 +72,16 @@
 }
 
 .portrait {
- min-width: 10%;
+  min-width: 10%;
   width: 45%;
   margin-right: 22%;
   margin-bottom: 5%;
   height: auto;
   display: block;
   z-index: 1000000 !important;
-
 }
 
-
-
-.image-container{
+.image-container {
   width: 300px;
   height: auto;
 }

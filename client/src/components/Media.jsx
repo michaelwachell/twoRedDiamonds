@@ -8,6 +8,7 @@ import Dep from '../../../Assets/coding_things.png'
 import Spot from '../../../Assets/spotifight.png'
 import Media from '../../../Assets/media_things.png'
 import Arrow from '../../../Assets/down-arrow.png'
+import Nuka from './Carousel.jsx'
 const QM = "https://78.media.tumblr.com/952e9b64a7c18c44256cc97271cfd025/tumblr_ou1jqjwnKg1ri5ljho1_r3_500.gif"
 
 // optional render for iframe. 
@@ -77,11 +78,13 @@ export default class Intro extends Component {
         </Parallax.Layer>
         <Parallax.Layer offset={offset} speed={0.8}>
           {
-            images ? (<div className="images"><a height="100px" href={url} target="_blank" > <img className="shadow" width="80%" src={images} /> </a></div>) : offset === 2 ? (<iframe className="frame" width="100%" height="166" width="35%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/82297113&color=%231c2919&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>) : null
+            images ? (<div className="images"><a height="100px" href={url} target="_blank" > <img className="shadow" width="80%" src={images} /> </a></div>) : offset === 2 ? (<iframe className="frame" width="100%" height="166" width="35%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/82297113&color=%231c2919&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>) : !images && offset===1 ? (<Nuka/>) : null
           }
   
   
         </Parallax.Layer>
+
+        a
   
       </React.Fragment>
   

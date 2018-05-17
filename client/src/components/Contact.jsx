@@ -42,15 +42,15 @@ export default class Contact extends Component {
           <form class="form" id="form1">
 
             <p class="name">
-              <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" onChange={(e) => this.setState({ name: e.target.value })} />
+              <input name="name" type="text" class="feedback-input" placeholder="Name" id="name" onChange={(e) => this.setState({ name: e.target.value })} />
             </p>
 
             <p class="email">
-              <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" onChange={(e) => this.setState({ email: e.target.value })} />
+              <input name="email" type="text" class="feedback-input" id="email" placeholder="Email" onChange={(e) => this.setState({ email: e.target.value })} />
             </p>
 
             <p class="text">
-              <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment" onChange={(e) => this.setState({ message: e.target.value })}></textarea>
+              <textarea name="text" type="text" class="feedback-input" id="comment" placeholder="Comment" onChange={(e) => this.setState({ message: e.target.value })}></textarea>
             </p>
 
             <div class="submit">

@@ -33,8 +33,9 @@
 	
 	width: 100%;
 	line-height: calc(3vw + 10%);
-	max-width: 10vw;
+	max-width: 28vw;
 	padding-left: 3px;
+	min-width: 8vw;
 }
 
 .number {
@@ -50,7 +51,8 @@
 
 .headerm {
 	position: relative;
-	left: 20%;
+	left: 12%;
+	top:1%;
 	font-size: calc(45px + 20%);
 	color: black;
 	

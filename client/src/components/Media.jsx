@@ -8,6 +8,7 @@ import Dep from '../../../Assets/coding_things.png'
 import Spot from '../../../Assets/spotifight.png'
 import Media from '../../../Assets/media_things.png'
 import Arrow from '../../../Assets/down-arrow.png'
+const QM = "https://78.media.tumblr.com/952e9b64a7c18c44256cc97271cfd025/tumblr_ou1jqjwnKg1ri5ljho1_r3_500.gif"
 
 // optional render for iframe. 
 // get all assets for visual display. 
@@ -18,90 +19,89 @@ import Arrow from '../../../Assets/down-arrow.png'
 
 const Nev = "http://static.tumblr.com/8c14a29a5ad49be881e2f9b3560247cd/bxckkmi/azdnea1cp/tumblr_static_cchzs14wpvwokggoowcs48s00.png"
 
-const spotCopy = ""
-
-const Page = ({
-  offset,
-  caption,
-  first,
-  second,
-  gradient,
-  images,
-  onClick,
-  count = 4,
-  context
-}) => {
-  return (
-    <React.Fragment className="media-back">
-      <Parallax.Layer offset={offset} speed={0.2} >
-        <div className="circBegin" />
-      </Parallax.Layer>
 
 
-      <Parallax.Layer offset={offset} speed={-0.2} >
-        <div className={`circEnd ${gradient}`} />
-      </Parallax.Layer>
-
-
-
-      <Parallax.Layer className="textm headerm wrapword" offset={offset} speed={0.4}>
-
-<div>
-
-
-          <div style={{ fontSize: "calc(3vw + 10%)" }}>{caption}</div>
-
-
-
-          < div style={{ fontSize: "calc(1vw + 10%)", paddingLeft: "1%" }}>{first} </div>
-
-
-
-    </div>
-
-
-      </Parallax.Layer>
-
-
-      <Parallax.Layer className="image-container-m" offset={offset} speed={0.8}>
-        {
-          images ? (<div className="images"><img className="shadow" width="80%" src={images} /></div>) : offset === 2 ? (<iframe className="frame" width="20%" height="auto" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/70553065&color=%23090706&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>) : null
-        }
-
-
-      </Parallax.Layer>
-
-         <Parallax.Layer className="image-container-m" offset={offset} speed={0.8} onClick={()=> this.context.parallax.scrollTo(offset + 1 === count ? 0 : offset+1)} >
-        
-          <div className="arrow"  ><img width="80%" src={Arrow} /></div> 
-        
-
-
-      </Parallax.Layer>
-
-    </React.Fragment>
-
-  )
-}
 
 export default class Intro extends Component {
-
-  constructor(props) {
-    super(props)
+  constructor(props, context) {
+    super(props, context)
     this.state = {}
-    this.scroll = this.scroll.bind(this);
+    this.newScroll= this.newScroll.bind(this);
+    this.Page = this.Page.bind(this)
+  }
+
+  Page ({
+    offset,
+    caption,
+    first,
+    second,
+    gradient,
+    images,
+    onClick,
+    count = 4,
+    context,
+    url
+  }) {
+    return (
+      <React.Fragment >
+        <Parallax.Layer className="getBack" offset={offset} speed={0.2} >
+          <div className="circBegin getBack" />
+        </Parallax.Layer>
+  
+  
+        <Parallax.Layer className="getBack" offset={offset} speed={-0.2} >
+          <div className={`circEnd ${gradient}`} />
+        </Parallax.Layer>
+  
+  
+  
+        <Parallax.Layer className="textm headerm wrapword to-the-front" offset={offset} speed={0.4}>
+  
+          <div >
+            <div style={{ fontSize: "calc(3vw + 10%)" }}>{caption}</div>
+            < div className="to-the-front" style={{ fontSize: "calc(1vw + 10%)", paddingLeft: "1%" }}>{first} </div>
+          </div>
+  
+  
+        </Parallax.Layer>
+  
+  
+ 
+  
+        <Parallax.Layer className="arrow" height="10%" offset={offset} speed={0.8}  >
+  
+          <div className="arrow-img" ><img width="80%" src={Arrow} onClick={()=> this.newScroll(offset, count)} /></div>
+  
+  
+  
+        </Parallax.Layer>
+        <Parallax.Layer offset={offset} speed={0.8}>
+          {
+            images ? (<div className="images"><a height="100px" href={url} target="_blank" > <img className="shadow" width="80%" src={images} /> </a></div>) : offset === 2 ? (<iframe className="frame" width="100%" height="166" width="35%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/82297113&color=%231c2919&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>) : null
+          }
+  
+  
+        </Parallax.Layer>
+  
+      </React.Fragment>
+  
+    )
   }
 
   scroll(to) {
     this.refs.parallax.scrollTo(to)
   }
 
+  newScroll(offset, count) {
+    return (offset + 1 === count ? this.scroll(0) : this.scroll(offset + 1));
+  }
+
   render() {
     return (<Parallax className="container" ref="parallax" pages={4} vertical="vertical" scrolling={true}>
-      <Page offset={0} gradient="teal" className="roundMe" images={Spot} caption="Spotifight.us" first={Copy.Spotifight()} />
-      <Page offset={1} gradient="black" images={Dep} caption="Visual" first="design stuff"  />
-      <Page offset={2} gradient="greyf" caption="Composition" first={Copy.TNES()} />
-      <Page offset={3} gradient="teal" caption="lwnmwr" first="coming soon..."  />
+      <this.Page offset={0} newScroll={this.newScroll}  gradient="teal" className="roundMe" images={Spot} url="http://www.spotifight.us" caption="Spotifight.us" first={Copy.Spotifight()}  />
+      <this.Page offset={1} newScroll={this.newScroll}  gradient="greyf" caption="Visual" first={Copy.Visual()}  />
+      <this.Page offset={2} newScroll={this.newScroll}  gradient="greyf" caption="Composition" first={Copy.Comp()}  />
+      <this.Page offset={3} newScroll={this.newScroll} gradient="teal" caption="lwnmwr" images={QM} first="coming soon..."  />
     </Parallax>)
   }
 }

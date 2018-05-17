@@ -1,11 +1,16 @@
 
 import React from 'react';
+import Github from '../../../Assets/github.svg'
 
 module.exports = {
 
-  Spotifight: () => { return (<p>Pick a song and battle your friends  in multiplayer minigames. Emerge the victor, and your song is played. (created with Socket.io)</p>) },
-  TNES: () => { return (<p> The Never-Ending Symphony is a musical patchwork that has a beginning but no end. Each week a minute is added by one of our members or a guest.</p>) },
-
+  Spotifight: () => { return (<div><p>Pick a song and battle your friends  in multiplayer minigames. Emerge the victor, and your song is played. (created with Socket.io) </p>  <p>  <a href="https://github.com/michaelwachell" target="_blank"> <img className="nested-img" src={Github}/> </a> </p></div>) },
+  Visual: () => { return ( <div><p> Layout, graphics and motion, oh my.</p>
+                    </div>
+  
+  
+  ) },
+  Comp: () => { return (<p> Sounds, loud and soft.</p>) },
 
 
 

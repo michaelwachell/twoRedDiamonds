@@ -2,6 +2,10 @@
 	background: radial-gradient(closest-side, transparent, #a0c5cf);
 }
 
+.getBack {
+	z-index: -10000000;
+}
+
 .container>div>div {
 	display: flex;
 	align-items: center;
@@ -26,9 +30,8 @@
 }
 
 .textm {
-	pointer-events: none;
+	
 	width: 100%;
-	min-width: 10vw;
 	line-height: calc(3vw + 10%);
 	max-width: 10vw;
 	padding-left: 3px;
@@ -46,9 +49,11 @@
 }
 
 .headerm {
-	margin-left: 20%;
+	position: relative;
+	left: 20%;
 	font-size: calc(45px + 20%);
 	color: black;
+	
 }
 
 .circBegin {
@@ -71,7 +76,7 @@
 	cursor: pointer;
 	position: relative;
 	left: 30%;
-	z-index: 100;
+	z-index: -1000;
 }
 
 .circEnd {
@@ -79,7 +84,7 @@
 	height: 100%;
 	overflow: visible;
 	position: relative;
-	z-index: 100;
+	z-index: -1000;
 	cursor: pointer;
 }
 
@@ -97,11 +102,14 @@
 }
 
 .images {
-	margin-left: 50%;
+	position: relative;
+	left:5%;
 	width: 100%;
 	height: auto;
 	min-width: 250px;
-	z-index: 1000000 !important;
+	min-height: 100px;
+	z-index: 10000000000 !important;
+	cursor: pointer;
 
 }
 
@@ -112,19 +120,43 @@
 }
 
 .image-container-m {
-	width: 8vw;
+	
 	height: auto;
+
+	z-index: 1000000000 !important;
 }
 
 .arrow {
 	z-index: 1000000 !important;
 	position: relative;
-	top:43%;
+	top:22%;
 	width: 3%;
+	max-height: 50px;
+
 }
 
 .frame {
 	position: relative;
-	left: 30%;
+	left: 25%;
 	z-index: 1000000000 !important;
+}
+
+.arrow-img {
+	width: 3%;
+	min-width: 20px;
+}
+
+
+img{
+	cursor: pointer;
+}
+
+.nested-img {
+  width: 20%;
+  z-index: 1000000 !important;
+}
+
+
+.to-the-front {
+	z-index: 10000000000 !important;
 }

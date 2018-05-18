@@ -1,156 +1,152 @@
 .container {
-	background: radial-gradient(closest-side, transparent, #a0c5cf);
+  background: radial-gradient(closest-side, transparent, #a0c5cf);
 }
 
 .getBack {
-	z-index: -10000000;
+  z-index: -10000000;
 }
 
-.container>div>div {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.container > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .wrapword {
-	display: flex;
-	white-space: -moz-pre-wrap !important;
-	/* Mozilla, since 1999 */
-	white-space: -pre-wrap;
-	/* Opera 4-6 */
-	white-space: -o-pre-wrap;
-	/* Opera 7 */
-	white-space: pre-wrap;
-	/* css-3 */
-	word-wrap: break-word;
-	/* Internet Explorer 5.5+ */
-	white-space: -webkit-pre-wrap;
-	/* Newer versions of Chrome/Safari*/
-	white-space: normal;
+  display: flex;
+  white-space: -moz-pre-wrap !important;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  white-space: pre-wrap;
+  /* css-3 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
+  white-space: -webkit-pre-wrap;
+  /* Newer versions of Chrome/Safari*/
+  white-space: normal;
 }
 
 .textm {
+
 	
 	width: 100%;
 	line-height: calc(3vw + 10%);
-	max-width: 28vw;
+	max-width: 13vw;
 	padding-left: 3px;
-	min-width: 8vw;
+	min-width: 10vw;
 }
 
 .number {
-	font-size: 450px;
-	color: #a8a8a8;
+  font-size: 450px;
+  color: #a8a8a8;
 }
 
 .number span {
-	display: inline-block;
-	position: relative;
-	transform: translate3d(-35%, 0, 0);
+  display: inline-block;
+  position: relative;
+  transform: translate3d(-35%, 0, 0);
 }
 
 .headerm {
-	position: relative;
-	left: 12%;
-	top:1%;
-	font-size: calc(45px + 20%);
-	color: black;
-	
+  position: relative;
+  left: 12%;
+  top: 1%;
+  font-size: calc(45px + 20%);
+  color: black;
 }
 
 .circBegin {
-	background-color: #0093b7;
-	clip-path: circle(30%);
-	overflow: visible;
-	position: relative;
+  background-color: #0093b7;
+  clip-path: circle(30%);
+  overflow: visible;
+  position: relative;
 }
 
 .circEnd {
-	clip-path: circle(20%);
-	overflow: visible;
-	position: relative;
-	left: 25%;
+  clip-path: circle(20%);
+  overflow: visible;
+  position: relative;
+  left: 25%;
 }
 
 .circBegin {
-	width: 100%;
-	height: 100%;
-	cursor: pointer;
-	position: relative;
-	left: 30%;
-	z-index: -1000;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+  left: 30%;
+  z-index: -1000;
 }
 
 .circEnd {
-	width: 100%;
-	height: 100%;
-	overflow: visible;
-	position: relative;
-	z-index: -1000;
-	cursor: pointer;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  position: relative;
+  z-index: -1000;
+  cursor: pointer;
 }
 
 .black {
-	background: #005f89;
+  background: #005f89;
 }
 
 .teal {
-	background: linear-gradient(to right, #0093b7 0%, #63cdd7 100%);
-	opacity: .75;
+  background: linear-gradient(to right, #0093b7 0%, #63cdd7 100%);
+  opacity: 0.75;
 }
 
 .greyf {
-	background: linear-gradient(to bottom, #a0c5cf 60%, #e6eceb 100%);
+  background: linear-gradient(to bottom, #a0c5cf 60%, #e6eceb 100%);
 }
 
 .images {
-	position: relative;
-	left:5%;
-	width: 100%;
-	height: auto;
-	min-width: 250px;
-	min-height: 100px;
-	z-index: 10000000000 !important;
-	cursor: pointer;
-
+  position: relative;
+  left: 5%;
+  width: 100%;
+  height: auto;
+  min-width: 250px;
+  min-height: 100px;
+  z-index: 10000000000 !important;
+  cursor: pointer;
 }
 
 .shadow {
-	-webkit-box-shadow: 21px 14px 59px -4px rgba(0, 0, 0, 0.44);
-	-moz-box-shadow: 21px 14px 59px -4px rgba(0, 0, 0, 0.44);
-	box-shadow: 21px 14px 59px -4px rgba(0, 0, 0, 0.44);
+  -webkit-box-shadow: 21px 14px 59px -4px rgba(0, 0, 0, 0.44);
+  -moz-box-shadow: 21px 14px 59px -4px rgba(0, 0, 0, 0.44);
+  box-shadow: 21px 14px 59px -4px rgba(0, 0, 0, 0.44);
 }
 
 .image-container-m {
-	
-	height: auto;
+  height: auto;
 
-	z-index: 1000000000 !important;
+  z-index: 1000000000 !important;
 }
 
 .arrow {
-	z-index: 1000000 !important;
-	position: relative;
-	top:22%;
-	width: 3%;
-	max-height: 50px;
-
+  z-index: 1000000 !important;
+  position: relative;
+  top: 22%;
+  width: 3%;
+  max-height: 50px;
 }
 
 .frame {
-	position: relative;
-	left: 25%;
-	z-index: 1000000000 !important;
+  position: relative;
+  left: 25%;
+  z-index: 1000000000 !important;
 }
 
 .arrow-img {
-	width: 3%;
-	min-width: 20px;
+  width: 3%;
+  min-width: 20px;
 }
 
-
-img{
-	cursor: pointer;
+img {
+  cursor: pointer;
 }
 
 .nested-img {
@@ -158,7 +154,6 @@ img{
   z-index: 1000000 !important;
 }
 
-
 .to-the-front {
-	z-index: 10000000000 !important;
+  z-index: 10000000000 !important;
 }

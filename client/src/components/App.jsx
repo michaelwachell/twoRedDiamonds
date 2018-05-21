@@ -4,7 +4,7 @@ import { Component } from 'react';
 import { Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './Navbar.jsx';
-import Development from './Development.jsx';
+
 import Intro from './Intro.jsx';
 import Media from './Media.jsx';
 import Contact from './Contact.jsx';
@@ -25,7 +25,7 @@ export default class App extends Component {
           <Navbar />
           <Route exact="exact" path="/" component={Intro} />
           <Route path="/media" component={Media} />
-          <Route path="/development" component={Development} />
+       
           <Route path="/contact" component={Contact} />
         </Fragment>
 

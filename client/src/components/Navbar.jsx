@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import { Route, Link } from 'react-router-dom';
 import './Navbar.scss';
-import Development from './Development.jsx';
+
 import Intro from './Intro.jsx';
 import Media from './Media.jsx';
 import Contact from './Contact.jsx';

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { Parallax } from 'react-spring'
 import './Intro.scss'
 
-import Images from './Images.js'
+import Images from './Images.jsx'
 import Dep from '../../../Assets/coding_things.png'
 import Me from '../../../Assets/me2.png'
 import Media from '../../../Assets/media_things.png'

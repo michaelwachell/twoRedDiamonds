@@ -53,6 +53,7 @@
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
+	z-index: 100000000000 !important;
 }
 
 .feedback-input:focus {
@@ -202,4 +203,3 @@ textarea:focus {
 	-webkit-animation-name: fadeInLeftBig;
 	animation-name: fadeInLeftBig;
 }
-

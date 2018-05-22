@@ -31,6 +31,12 @@ export default class Intro extends Component {
     this.Page = this.Page.bind(this)
   }
 
+  componentDidUpdate() {
+    setTimeout(() => {
+        window.dispatchEvent(new Event('resize'));
+    }, 0);
+}
+
   Page ({
     offset,
     caption,
@@ -78,7 +84,11 @@ export default class Intro extends Component {
         </Parallax.Layer>
         <Parallax.Layer offset={offset} speed={0.8}>
           {
-            images ? (<div className="images"><a height="100px" href={url} target="_blank" > <img className="shadow" width="80%" src={images} /> </a></div>) : offset === 2 ? (<iframe className="frame" width="100%" height="166" width="35%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/82297113&color=%231c2919&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>) : !images && offset===1 ? (<Nuka/>) : null
+            images ? (<div className="images"><a height="100px" href={url} target="_blank" > <img className="shadow" width="80%" src={images} /> </a></div>) 
+            : offset === 2 
+            ? (<iframe className="frame" width="100%" height="166" width="35%" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/82297113&color=%231c2919&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>) 
+            : !images && offset===1 ? (<Nuka/>) 
+            : null
           }
   
   

@@ -1,7 +1,16 @@
 .carousel {
-    width: 20%;
+    width: 30%;
+    height: 40%;
     position: relative;
     left: 20%;
-    display: flex;
+
 
 }
+
+.vis {
+    background-repeat: no-repeat;
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+}
+

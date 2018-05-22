@@ -37,34 +37,29 @@ export default class Contact extends Component {
   render() {
     return (<div id="contactBG">
 
-      <div id="form-main" class="fadeInLeftBig">
+      <div id="form-main" >
         <div id="form-div">
-          <form class="form" id="form1">
+          <form className="form" id="form1">
 
-            <p class="name">
-              <input name="name" type="text" class="feedback-input" placeholder="Name" id="name" onChange={(e) => this.setState({ name: e.target.value })} />
+            <p className="name">
+              <input name="name" type="text" className="feedback-input" placeholder="Name" id="name" onChange={(e) => this.setState({ name: e.target.value })} />
             </p>
 
-            <p class="email">
-              <input name="email" type="text" class="feedback-input" id="email" placeholder="Email" onChange={(e) => this.setState({ email: e.target.value })} />
+            <p className="email">
+              <input name="email" type="text" className="feedback-input" id="email" placeholder="Email" onChange={(e) => this.setState({ email: e.target.value })} />
             </p>
 
-            <p class="text">
-              <textarea name="text" type="text" class="feedback-input" id="comment" placeholder="Comment" onChange={(e) => this.setState({ message: e.target.value })}></textarea>
+            <p className="theText">
+              <textarea name="text" type="text" className="feedback-input" id="comment" placeholder="Comment" onChange={(e) => this.setState({ message: e.target.value })}></textarea>
             </p>
 
-            <div class="submit">
+            <div className="submit">
               <input type="submit" value="SEND" id="button-blue" onClick={() => this.sendMe()} />
-              <div class="ease"></div>
+              <div className="ease"></div>
             </div>
           </form>
         </div>
-        {
-          this.sent
-            ? (<h2>It's away! Thanks for reaching out
-              </h2>)
-            : null
-        }
+        
       </div>
 
     </div>)

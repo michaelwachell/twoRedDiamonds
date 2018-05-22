@@ -4,26 +4,30 @@ import './Carousel.scss';
 import Images from './Images.jsx'
 
 export default class Nuka extends React.Component {
+  afterSlide (currentSlide) {
+    const list = window.document.querySelector('.slider-list');
+    const nextSlide = list.childNodes[currentSlide];
+    list.style.height = nextSlide.offsetHeight + 'px';
+}
+
+  
   render() {
     return (
+      
       <Carousel 
+                afterSlide={this.afterSlide}
                 width="60%"
-                className="carousel"
-                framePadding="10%"
+                className="carousel"             
                 cellAlign="center"
-
-                heightMode="max"
-                height="50%"
+                
                 slideWidth={0.5}
-                slidesToShow={1}
-                cellSpacing={500}
-                renderBottomCenterControls={false}
-                
-                
+                cellSpacing={300}
+                renderBottomCenterControls={()=> false}
+             
                 >
         {
           Images.first.map((img, key) => {
-            return (<img src={img} key={key}/>)
+            return (<img  className="vis" src={img} key={key}/>)
           })
         }
       </Carousel>

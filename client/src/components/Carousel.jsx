@@ -13,7 +13,7 @@ export default class Nuka extends React.Component {
   
   render() {
     return (
-      
+   
       <Carousel 
                 afterSlide={this.afterSlide}
                 width="60%"

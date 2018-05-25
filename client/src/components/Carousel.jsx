@@ -16,11 +16,11 @@ export default class Nuka extends React.Component {
    
       <Carousel 
                 afterSlide={this.afterSlide}
-                width="60%"
+                width="65%"
                 className="carousel"             
                 cellAlign="center"
                 
-                slideWidth={0.5}
+                slideWidth={0.8}
                 cellSpacing={300}
                 renderBottomCenterControls={()=> false}
              

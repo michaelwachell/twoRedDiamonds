@@ -62,9 +62,9 @@ export default class Intro extends Component {
   
   
   
-        <Parallax.Layer className="textm headerm wrapword to-the-front" offset={offset} speed={0.4}>
+        <Parallax.Layer className="textm wrapword to-the-front" offset={offset} speed={0.4}>
   
-          <div >
+          <div>
             <div style={{ fontSize: "calc(3vw + 10%)" }}>{caption}</div>
             < div className="to-the-front" style={{ fontSize: "calc(1vw + 10%)", paddingLeft: "1%" }}>{first} </div>
           </div>
@@ -83,10 +83,11 @@ export default class Intro extends Component {
   
         </Parallax.Layer>
         <Parallax.Layer offset={offset} speed={0.8}>
+          
           {
-            images ? (<div className="images"><a height="100px" href={url} target="_blank" > <img className="shadow" width="80%" src={images} /> </a></div>) 
+            images ? (<div className="imagesM"><a height="100px" href={url} target="_blank" > <img className="shadow" width="80%" src={images} /> </a></div>) 
             : offset === 2 
-            ? (<iframe className="frame" width="100%" height="166" width="35%" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/82297113&color=%231c2919&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>) 
+            ? (<div className="imagesM"> <iframe  width="85%" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/82297113&color=%231c2919&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe> </div>) 
             : !images && offset===1 ? (<Nuka/>) 
             : null
           }
@@ -94,7 +95,7 @@ export default class Intro extends Component {
   
         </Parallax.Layer>
 
-        a
+        
   
       </React.Fragment>
   
@@ -114,7 +115,7 @@ export default class Intro extends Component {
       <this.Page offset={0} newScroll={this.newScroll}  gradient="teal" className="roundMe" images={Spot} url="http://www.spotifight.us" caption="Spotifight.us" first={Copy.Spotifight()}  />
       <this.Page offset={1} newScroll={this.newScroll}  gradient="greyf" caption="Visual" first={Copy.Visual()}  />
       <this.Page offset={2} newScroll={this.newScroll}  gradient="greyf" caption="Composition" first={Copy.Comp()}  />
-      <this.Page offset={3} newScroll={this.newScroll} gradient="teal" caption="lwnmwr" images={QM} first="coming soon..."  />
+      <this.Page offset={3} newScroll={this.newScroll} gradient="teal" caption="lwnmwr" images={QM} first={Copy.Lwn()}  />
     </Parallax>)
   }
 }

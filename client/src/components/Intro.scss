@@ -1,3 +1,46 @@
+
+
+.number span {
+  display: inline-block;
+  position: relative;
+  transform: translate3d(-35%, 0, 0);
+}
+
+.stripe {
+  height: 2px;
+  width: auto;
+}
+
+.slopeBegin {
+  background-color: #0093b7;
+  clip-path: polygon(15% 0%, 90% 0%, 65% 100%, 0% 100%);
+}
+
+.slopeEnd {
+  clip-path: polygon(70% 0, 90% 0, calc(100% - 10vw) 100%, calc(70% - 20vw) 100%);
+}
+
+.slopeBegin,
+.slopeEnd {
+  position: absolute;
+  width: 140%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.black {
+  background: #005f89;
+}
+
+.teal {
+  background: linear-gradient(to right, #0093b7 0%, #63cdd7 100%);
+  opacity: .75;
+}
+
+.greyf {
+  background: linear-gradient(to bottom, #a0c5cf 60%, #e6eceb 100%);
+}
+
 @media (min-width: 600px) {
   .flexing {
     display: flex;
@@ -114,45 +157,4 @@
     line-height: 0px;
     font-size: calc(20px + 40%);
   }
-}
-
-.number span {
-  display: inline-block;
-  position: relative;
-  transform: translate3d(-35%, 0, 0);
-}
-
-.stripe {
-  height: 2px;
-  width: auto;
-}
-
-.slopeBegin {
-  background-color: #0093b7;
-  clip-path: polygon(15% 0%, 90% 0%, 65% 100%, 0% 100%);
-}
-
-.slopeEnd {
-  clip-path: polygon(70% 0, 90% 0, calc(100% - 10vw) 100%, calc(70% - 20vw) 100%);
-}
-
-.slopeBegin,
-.slopeEnd {
-  position: absolute;
-  width: 140%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.black {
-  background: #005f89;
-}
-
-.teal {
-  background: linear-gradient(to right, #0093b7 0%, #63cdd7 100%);
-  opacity: .75;
-}
-
-.greyf {
-  background: linear-gradient(to bottom, #a0c5cf 60%, #e6eceb 100%);
 }

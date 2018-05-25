@@ -103,7 +103,7 @@
 // 
 // 
 // END DESKTOP BP
-@media (max-width: 599px) {
+@media only screen and (max-width: 599px) {
   .container {
     background: radial-gradient(closest-side, transparent, #a0c5cf);
   }

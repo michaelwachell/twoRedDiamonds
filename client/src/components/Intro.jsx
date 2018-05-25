@@ -30,7 +30,7 @@ const Page = ({
 
       <Parallax.Layer className="image-container" offset={offset} speed={0.8} onClick={onClick}>
         {
-          images && offset === 0 ? (<div className="portrait"><img width="30%" src={images} /></div>) : null
+          images && offset === 0 ? (<div className="portrait"><img width="60%" src={images} /></div>) : null
         }
 
 
@@ -45,10 +45,10 @@ const Page = ({
           }}>{caption}</p>
 
           <p style={{
-            fontSize: "calc(3vw + 10%)"
+            fontSize: "calc(4vw + 10%)"
           }}>{first} </p>
           <p style={{
-            fontSize: "calc(1vw + 10%)"
+            fontSize: "calc(2vw + 10%)"
           }}>{second}</p>
         </div>
         <div>

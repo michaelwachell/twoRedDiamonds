@@ -47,7 +47,6 @@
     top: -13vw;
     left: -13vw;
     z-index: 1000000 !important;
-
   }
   .image-container {
     width: 300px;
@@ -59,15 +58,13 @@
     font-family: 'Kanit', sans-serif;
     line-height: 0px;
     position: relative;
-    
   }
 }
+
 // END DESKTOP BP
 // 
 // 
 // END DESKTOP BP
-
-
 @media only screen and (max-width: 599px) {
   .container>div>div {
     display: flex;
@@ -93,7 +90,7 @@
     left: 5%;
     width: 100%;
     height: auto;
-    top:25%;
+    top: 25%;
     min-width: 250px;
     min-height: 100px;
   }
@@ -131,10 +128,13 @@
 .slopeBegin {
   background-color: #0093b7;
   clip-path: polygon(15% 0%, 90% 0%, 65% 100%, 0% 100%);
+  -webkit-clip-path: polygon(15% 0%, 90% 0%, 65% 100%, 0% 100%);
 }
 
 .slopeEnd {
+  
   clip-path: polygon(70% 0, 90% 0, calc(100% - 10vw) 100%, calc(70% - 20vw) 100%);
+  -webkit-clip-path: polygon(70% 0, 90% 0, calc(100% - 10%) 100%, calc(70% - 20%) 100%);
 }
 
 .slopeBegin,
@@ -151,9 +151,14 @@
 
 .teal {
   background: linear-gradient(to right, #0093b7 0%, #63cdd7 100%);
-  opacity: .75;
+  background: -webkit-linear-gradient(right, #0093b7, #63cdd7); // opacity: .75;
 }
 
 .greyf {
   background: linear-gradient(to bottom, #a0c5cf 60%, #e6eceb 100%);
+  background: -webkit-linear-gradient(bottom, #a0c5cf, #e6eceb);
+}
+
+.container {
+  background: -webkit-linear-gradient(bottom, #a0c5cf, #63cdd7);
 }

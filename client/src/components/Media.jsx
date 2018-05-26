@@ -111,7 +111,7 @@ export default class Intro extends Component {
   }
 
   render() {
-    return (<Parallax className="container" ref="parallax" pages={4} vertical="vertical" scrolling={true}>
+    return (<Parallax className="media-container" ref="parallax" pages={4} vertical="vertical" scrolling={true}>
       <this.Page offset={0} newScroll={this.newScroll}  gradient="teal" className="roundMe" images={Spot} url="http://www.spotifight.us" caption="Spotifight.us" first={Copy.Spotifight()}  />
       <this.Page offset={1} newScroll={this.newScroll}  gradient="greyf" caption="Visual" first={Copy.Visual()}  />
       <this.Page offset={2} newScroll={this.newScroll}  gradient="greyf" caption="Composition" first={Copy.Comp()}  />

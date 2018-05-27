@@ -1,10 +1,4 @@
 @media (min-width: 600px) {
-  .flexing {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-  }
   .container>div>div {
     display: flex;
     align-items: center;
@@ -14,25 +8,23 @@
   .image-container {
     width: 300px;
     height: auto;
-    margin-top: 3vw;
+    // margin-top: 3vw;
   }
   .header {
-    margin-left: 4vw;
+    // margin-left: 4vw;
     font-size: calc(15px + 20%);
     color: #f9f9f9;
   }
   .image-container {
     width: 300px;
     height: auto;
-    margin-top: 3vw;
   }
   .images {
-    margin-left: 50%;
+    // margin-left: 50%;
     width: 45%;
     height: auto;
-    display: block;
-    position: relative;
-    left: 5%;
+    // position: relative;
+    // left: 5%;
     width: 100%;
     height: auto;
     min-width: 250px;
@@ -44,8 +36,8 @@
     width: 45%;
     position: relative;
     height: auto;
-    top: -13vw;
-    left: -13vw;
+    // top: -13vw;
+    // left: -13vw;
     z-index: 1000000 !important;
   }
   .image-container {
@@ -54,7 +46,7 @@
   }
   .text {
     pointer-events: none;
-    justify-content: start !important;
+    justify-content: center;
     font-family: 'Kanit', sans-serif;
     line-height: 0px;
     position: relative;
@@ -69,13 +61,15 @@
   .container>div>div {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .image-container {
     width: 30%;
     height: auto;
     position: relative;
-    left: 4vw;
-    top: 17%;
+    // left: 4vw;
+    // top: 17%;
   }
   .header {
     font-size: calc(20px + 40%);
@@ -84,13 +78,13 @@
   .images {
     width: 45%;
     height: auto;
-    position: relative;
+    // position: relative;
     left: 15vw;
     z-index: 1000000 !important;
-    left: 5%;
+    // left: 5%;
     width: 100%;
     height: auto;
-    top: 25%;
+    // top: 25%;
     min-width: 250px;
     min-height: 100px;
   }
@@ -98,16 +92,13 @@
     min-width: 50%;
     width: 80%;
     position: relative;
-    left: 11vw;
-    top: 25%;
+    // left: 11vw;
+  
     height: auto;
     z-index: 1000000 !important;
   }
   .text {
-    position: relative;
-    top: 27%;
     pointer-events: none;
-    justify-content: start !important;
     font-family: 'Kanit', sans-serif;
     line-height: 0px;
     font-size: calc(20px + 40%);

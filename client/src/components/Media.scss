@@ -55,7 +55,7 @@ img {
   .media-container > div > div {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: row;
   }
   .wrapword {
@@ -80,7 +80,7 @@ img {
     max-width: 13vw;
     padding-left: 3px;
     min-width: 10vw;
-    // position: relative;
+    position: absolute;
     // left: 10%;
     // top: -1%;
     font-size: calc(45px + 20%);
@@ -121,7 +121,7 @@ img {
     // margin-left: 50%;
     width: 45%;
     height: auto;
-    // position: relative;
+    position: absolute;
     // left: 5%;
     // top:-5%;
     width: 100%;
@@ -158,6 +158,7 @@ img {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
+   justify-content: space-evenly;
   }
   .textm {
     width: 100%;
@@ -165,7 +166,6 @@ img {
     max-width: 50%;
     padding-left: 3px;
     min-width: 20%;
-    text-align: center;
     // position: relative;
     // left: 24%;
     // top: 16%;
@@ -207,9 +207,10 @@ img {
     // position: relative;
     // left: 7%;
     // top: 35%;
-    height: auto;
+
     min-width: 400px;
     min-height: 100px;
+    max-width: 60%;
     z-index: 10000000000 !important;
   }
   .nested-img {

@@ -82,12 +82,12 @@ export default class Intro extends Component {
   
   
         </Parallax.Layer>
-        <Parallax.Layer offset={offset} speed={0.8}>
+        <Parallax.Layer className="imagesM" offset={offset} speed={0.8}>
           
           {
-            images ? (<div className="imagesM"><a height="100px" href={url} target="_blank" > <img className="shadow" width="80%" src={images} /> </a></div>) 
+            images ? (<div ><a height="100px" href={url} target="_blank" > <img  width="80%" src={images} /> </a></div>) 
             : offset === 2 
-            ? (<div className="imagesM"> <iframe  width="85%" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/82297113&color=%231c2919&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe> </div>) 
+            ? (<div> <iframe  width="85%" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/82297113&color=%231c2919&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe> </div>) 
             : !images && offset===1 ? (<Nuka/>) 
             : null
           }

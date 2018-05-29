@@ -1,3 +1,5 @@
+
+
 .black {
   background: #005f89;
 }
@@ -22,6 +24,8 @@
   z-index: 1000000000 !important;
 }
 
+
+
 .arrow-img {
   width: 3%;
   min-width: 20px;
@@ -40,7 +44,8 @@ img {
   z-index: 10000000000 !important;
 }
 
-// div {
+
+// div { 
 // border: 1px black solid
 
 // }
@@ -52,10 +57,10 @@ img {
   .getBack {
     z-index: -10000000;
   }
-  .media-container > div > div {
+  .media-container>div>div {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-direction: row;
   }
   .wrapword {
@@ -80,11 +85,12 @@ img {
     max-width: 13vw;
     padding-left: 3px;
     min-width: 10vw;
-    position: absolute;
-    // left: 10%;
-    // top: -1%;
+    position: relative;
+    left: 10%;
+    top: -1%;
     font-size: calc(45px + 20%);
     color: black;
+    
   }
   // .headerm {
 
@@ -93,37 +99,37 @@ img {
     background-color: #0093b7;
     clip-path: circle(30%);
     overflow: visible;
-    // position: relative;
+    position: relative;
   }
   .circEnd-m {
     clip-path: circle(20%);
     overflow: visible;
-    // position: relative;
+    position: relative;
     left: 25%;
   }
   .circBegin-m {
     width: 100%;
     height: 100%;
     cursor: pointer;
-    // position: relative;
-    // left: 30%;
+    position: relative;
+    left: 30%;
     z-index: -1000;
   }
   .circEnd-m {
     width: 100%;
     height: 100%;
-    // overflow: visible;
-    // position: relative;
+    overflow: visible;
+    position: relative;
     z-index: -1000;
     cursor: pointer;
   }
   .imagesM {
-    // margin-left: 50%;
+    margin-left: 50%;
     width: 45%;
     height: auto;
-    position: absolute;
-    // left: 5%;
-    // top:-5%;
+    position: relative;
+    left: 5%;
+    top:-5%;
     width: 100%;
     height: auto;
     min-width: 450px;
@@ -132,33 +138,33 @@ img {
   }
   .frame {
     position: relative;
-    // left: 25%;
+    left: 25%;
+   
     z-index: 1000000000 !important;
   }
   .arrow {
     z-index: 1000000 !important;
     position: relative;
-    // top: 22%;
+    top: 22%;
     width: 3%;
     max-height: 50px;
   }
 }
 
 // END DESKTOP BP
-//
-//
+// 
+// 
 // END DESKTOP BP
 @media only screen and (max-width: 599px) {
   .media-container {
     background: radial-gradient(closest-side, transparent, #a0c5cf);
   }
-  .media-container > div > div {
+  .media-container>div>div {
     display: flex;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-   justify-content: space-evenly;
   }
   .textm {
     width: 100%;
@@ -166,9 +172,10 @@ img {
     max-width: 50%;
     padding-left: 3px;
     min-width: 20%;
-    // position: relative;
-    // left: 24%;
-    // top: 16%;
+    text-align: center;
+    position: relative;
+    left: 24%;
+    top: 16%;
     font-size: calc(100px + 20%);
     color: black;
     max-height: 200px;
@@ -179,55 +186,55 @@ img {
   .circEnd-m {
     clip-path: circle(20%);
     overflow: visible;
-    // position: relative;
+    position: relative;
     width: 100%;
     height: 100%;
     overflow: visible;
     position: relative;
     z-index: -1000;
     cursor: pointer;
-    // top: -12%;
+    top: -12%;
   }
 
   .circBegin-m {
     width: 100%;
     height: 100%;
     cursor: pointer;
-    // top: -15%;
-    // position: relative;
+    top: -15%;
+    position: relative;
     z-index: -1000;
     background-color: #0093b7;
     clip-path: circle(30%);
     overflow: visible;
+    position: relative;
   }
 
   .imagesM {
     width: 45%;
     height: auto;
-    // position: relative;
-    // left: 7%;
-    // top: 35%;
-
+    position: relative;
+    left: 7%;
+    top: 35%;
+    height: auto;
     min-width: 400px;
     min-height: 100px;
-    max-width: 60%;
     z-index: 10000000000 !important;
   }
   .nested-img {
     max-width: 50px;
   }
   .frame {
-    // position: relative;
-    // left: 25%;
-    // top: 40%;
+    position: relative;
+    left: 25%;
+    top: 40%;
     z-index: 1000000000 !important;
     min-width: 400px;
   }
   .arrow {
     z-index: 1000000 !important;
-    // position: relative;
-    // top: 24%;
-    // width: 3%;
+    position: relative;
+    top: 24%;
+    width: 3%;
     max-height: 50px;
   }
   p {

@@ -28,13 +28,6 @@ const Page = ({
         <div className={`slopeEnd ${gradient}`} />
       </Parallax.Layer>
 
-      <Parallax.Layer className="image-container" offset={offset} speed={0.8} onClick={onClick}>
-        {
-          images && offset === 0 ? (<div className="portrait"><img width="60%" src={images} /></div>) : null
-        }
-
-
-      </Parallax.Layer>
 
       <Parallax.Layer className="text header" offset={offset} speed={0.4}>
 
@@ -57,6 +50,13 @@ const Page = ({
 
       </Parallax.Layer>
 
+      <Parallax.Layer className="image-container" offset={offset} speed={0.8} onClick={onClick}>
+        {
+          images && offset === 0 ? (<div className="images"><img width="60%" src={images} /></div>) : null
+        }
+
+
+      </Parallax.Layer>
 
       <Parallax.Layer className="image-container" offset={offset} speed={0.8} onClick={onClick}>
         {

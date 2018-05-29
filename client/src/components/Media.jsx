@@ -52,19 +52,19 @@ export default class Intro extends Component {
     return (
       <React.Fragment >
         <Parallax.Layer className="getBack" offset={offset} speed={0.2} >
-          <div className="circBegin getBack" />
+          <div className="circBegin-m getBack" />
         </Parallax.Layer>
   
   
         <Parallax.Layer className="getBack" offset={offset} speed={-0.2} >
-          <div className={`circEnd ${gradient}`} />
+          <div className={`circEnd-m ${gradient}`} />
         </Parallax.Layer>
   
   
   
-        <Parallax.Layer className="textm wrapword to-the-front" offset={offset} speed={0.4}>
+        <Parallax.Layer className="wrapword to-the-front textm" offset={offset} speed={0.4}>
   
-          <div>
+          <div className="" >
             <div style={{ fontSize: "calc(3vw + 10%)" }}>{caption}</div>
             < div className="to-the-front" style={{ fontSize: "calc(1vw + 10%)", paddingLeft: "1%" }}>{first} </div>
           </div>
@@ -75,7 +75,7 @@ export default class Intro extends Component {
   
  
   
-        <Parallax.Layer className="arrow" height="10%" offset={offset} speed={0.8}  >
+        <Parallax.Layer className="arrow" height="10%" offset={offset} speed={0.8} onClick={()=> this.newScroll(offset, count)}  >
   
           <div className="arrow-img" ><img width="80%" src={Arrow} onClick={()=> this.newScroll(offset, count)} /></div>
   

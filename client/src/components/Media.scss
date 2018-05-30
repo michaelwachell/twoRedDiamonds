@@ -13,9 +13,7 @@
   background: -webkit-linear-gradient(bottom, #a0c5cf, #e6eceb);
 }
 
-.container {
- 
-}
+
 
 .shadow {
   -webkit-box-shadow: 21px 14px 59px -4px rgba(0, 0, 0, 0.44);
@@ -46,16 +44,18 @@ img {
   z-index: 10000000000 !important;
 }
 
-div {
-border: 1px black solid
-
+.media-container {
+  background: radial-gradient(closest-side, transparent, #a0c5cf);
+  background: -webkit-linear-gradient(bottom, #a0c5cf, #63cdd7);
 }
 
+// div {
+// border: 1px black solid
+
+// }
+
 @media (min-width: 600px) {
-  .media-container {
-    background: radial-gradient(closest-side, transparent, #a0c5cf);
-    background: -webkit-linear-gradient(bottom, #a0c5cf, #63cdd7);
-  }
+
   .getBack {
     z-index: -10000000;
   }
@@ -84,7 +84,7 @@ border: 1px black solid
   .textm {
     width: 100%;
     line-height: calc(3vw + 10%);
-    max-width: 13vw;
+    max-width: 15vw;
     padding-left: 3px;
     min-width: 10vw;
     position: relative;
@@ -131,6 +131,7 @@ border: 1px black solid
     height: auto;
     min-width: 450px;
     min-height: 100px;
+    max-width: 500px;
     z-index: 10000000000 !important;
   }
   .frame {
@@ -153,10 +154,7 @@ border: 1px black solid
 //
 // END DESKTOP BP
 @media only screen and (max-width: 599px) {
-  .media-container {
-    background: radial-gradient(closest-side, transparent, #a0c5cf);
-    background: -webkit-linear-gradient(bottom, #a0c5cf, #63cdd7);
-  }
+
   .media-container > div > div {
     display: flex;
     align-items: center;
@@ -171,8 +169,8 @@ border: 1px black solid
     min-width: 20%;
     text-align: center;
     position: relative;
-    // left: 24%;
-    // top: 16%;
+    left: 24%;
+    top: 15%;
     font-size: calc(100px + 20%);
     color: black;
     max-height: 200px;
@@ -197,7 +195,7 @@ border: 1px black solid
   .circBegin-m {
     width: 100%;
     height: 100%;
-    top: -15%;
+    top: -12%;
     position: relative;
     z-index: -1000;
     background-color: #0093b7;
@@ -216,7 +214,7 @@ border: 1px black solid
     height: auto;
     position: relative;
     // left: 7%;
-    top: -5%;
+    top: -3%;
     height: auto;
     min-width: 400px;
     min-height: 100px;
@@ -228,15 +226,15 @@ border: 1px black solid
   }
   .frame {
     position: relative;
-    // left: 25%;
-    // top: 40%;
+    left: 25%;
+    top: 40%;
     z-index: 1000000000 !important;
     min-width: 400px;
   }
   .arrow {
     z-index: 1000000 !important;
     position: relative;
-    top: 20%;
+    top: 23%;
     width: 3%;
     max-height: 50px;
   }

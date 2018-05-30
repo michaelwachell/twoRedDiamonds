@@ -60,7 +60,7 @@ const Page = ({
 
       <Parallax.Layer className="image-container" offset={offset} speed={0.8} onClick={onClick}>
         {
-          images && offset !== 0 ? (<div className="images"><img width="80%" src={images} /></div>) : null
+          images && offset !== 0 ? (<div className="images"><img width="70%" src={images} /></div>) : null
         }
 
 

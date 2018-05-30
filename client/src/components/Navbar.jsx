@@ -10,7 +10,7 @@ import App from './App.jsx'
 
 const Navbar = (props) => {
   return (
-   
+    <div id="noScroll">
       <div id="header">
         <div> <img id="twoRedLogo" src="https://ci3.googleusercontent.com/proxy/UQYUMcXxWzW23Yu4YSPrmP3Pg_o8qMgSentObNcPCSoaVRPAVGEzjDN_XBdOMw08zFI2Kg=s0-d-e1-ft#http://i.imgur.com/eIqamb8.jpg" /> </div>
         <div className="siteLink">
@@ -30,7 +30,7 @@ const Navbar = (props) => {
             Contact
           </Link>
         </div>
-    
+      </div>
     </div>)
 }
 export default Navbar;

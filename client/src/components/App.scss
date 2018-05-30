@@ -24,27 +24,27 @@
   font-size: calc(12px + 20%);
 }
 
-.media-container>div>div>img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  img:hover {
-    -webkit-transform: scale(1.3);
-    -ms-transform: scale(1.3);
-    transform: scale(1.3);
-    cursor: pointer;
-  }
-}
+// .media-container>div>div>img {
+//   width: 100%;
+//   max-width: 400px;
+//   height: auto;
+//   img:hover {
+//     -webkit-transform: scale(1.3);
+//     -ms-transform: scale(1.3);
+//     transform: scale(1.3);
+//     cursor: pointer;
+//   }
+// }
 
 .media-container {
   width: 100%;
   font-size: 2vw;
   height: auto;
-  padding: 4vw;
+
   background-position: fixed;
-  background: #83a4d4;
+  // background: #83a4d4;
   /* fallback for old browsers */
-  background: radial-gradient(teal 5%, transparent);
+  // background: radial-gradient(teal 5%, transparent);
 }
 
 .folio-img {

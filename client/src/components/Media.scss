@@ -41,7 +41,7 @@ img {
 
 .nested-img {
   width: 20%;
-  z-index: 1000000 !important;
+  z-index: 100000000000000 !important;
 }
 
 .to-the-front {
@@ -50,13 +50,13 @@ img {
 
 .media-container {
   background: radial-gradient(closest-side, transparent, #a0c5cf);
-  background: -webkit-linear-gradient(bottom, #a0c5cf, #63cdd7);
+  background: -webkit-radial-gradient(center, transparent, #a0c5cf);
 }
 
-div {
-border: 1px black solid
+// div {
+// border: 1px black solid
 
-}
+// }
 
 @media (min-width: 600px) {
 
@@ -90,7 +90,7 @@ border: 1px black solid
     line-height: calc(3vw + 10%);
     max-width: 15vw;
     padding-left: 3px;
-    min-width: 10vw;
+    min-width: 300px;
     position: relative;
     left: 10%;
     // top: -1%;
@@ -125,16 +125,16 @@ border: 1px black solid
     left: 25%;
   }
   .imagesM {
-    margin-left: 50%;
+
     width: 45%;
     height: auto;
     position: relative;
-    // left: 5%;
+    left: 45%;
     // top: -5%;
     height: auto;
     min-width: 300px;
     min-height: 100px;
-    max-width: 500px;
+    max-width: 60%;
     z-index: 100000 !important;
   }
   .frame {
@@ -179,7 +179,7 @@ border: 1px black solid
     color: black;
     max-height: 200px;
     align-self: center;
-    z-index: -1000000;
+    // z-index: 1000000;
   }
 
   .circEnd-m {
@@ -189,11 +189,12 @@ border: 1px black solid
     overflow: visible;
     z-index: -1000;
     cursor: pointer;
-    -webkit-clip-path: circle(20%);
+    -webkit-clip-path: circle(25%);
     overflow: visible;
     position: relative;
     // left: 25%
-    clip-path: circle(20%);
+    clip-path: circle(25%);
+    top: -7%;
   }
 
   .circBegin-m {
@@ -221,12 +222,13 @@ border: 1px black solid
     top: -4%;
     height: auto;
     min-width: 400px;
-    min-height: 100px;
+    min-height: 200px;
     text-align: center;
     z-index: 10000000000 !important;
   }
   .nested-img {
     max-width: 50px;
+    z-index: 1000000000 !important;
   }
   .frame {
     position: relative;
@@ -234,6 +236,8 @@ border: 1px black solid
     top: 37%;
     z-index: 1000000000 !important;
     min-width: 400px;
+    width: 100%;
+    
   }
   .arrow {
     z-index: 1000000 !important;

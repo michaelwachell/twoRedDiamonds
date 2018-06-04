@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import { Parallax } from 'react-spring'
 import './Intro.scss'
-
 import Images from './Images.jsx'
 import Dep from '../../../Assets/coding_things.png'
 import Me from '../../../Assets/me2.png'
@@ -28,23 +27,16 @@ const Page = ({
         <div className={`slopeEnd ${gradient}`} />
       </Parallax.Layer>
 
-      <Parallax.Layer className="image-container" offset={offset} speed={0.8} onClick={onClick}>
-        {
-          images && offset === 0 ? (<div className="portrait"><img width="60%" src={images} /></div>) : null
-        }
 
-
-      </Parallax.Layer>
-
-      <Parallax.Layer className="text header" offset={offset} speed={0.4}>
+      <Parallax.Layer className="text header wrapword" offset={offset} speed={0.4}>
 
         <div>
 
-          <p style={{
-            fontSize: "calc(8vw + 10%)"
+          <p className="caption" style={{
+            fontSize: "calc(8vw + 10%)",
           }}>{caption}</p>
 
-          <p style={{
+          <p className="first" style={{
             fontSize: "calc(4vw + 10%)"
           }}>{first} </p>
           <p style={{
@@ -57,10 +49,17 @@ const Page = ({
 
       </Parallax.Layer>
 
+      <Parallax.Layer className="image-container" offset={offset} speed={0.8} onClick={onClick}>
+        {
+          images && offset === 0 ? (<div className="images"><img width="60%" src={images} /></div>) : null
+        }
+
+
+      </Parallax.Layer>
 
       <Parallax.Layer className="image-container" offset={offset} speed={0.8} onClick={onClick}>
         {
-          images && offset !== 0 ? (<div className="images"><img width="80%" src={images} /></div>) : null
+          images && offset !== 0 ? (<div className="images"><img width="70%" src={images} /></div>) : null
         }
 
 
@@ -82,12 +81,22 @@ export default class Intro extends Component {
     this.refs.parallax.scrollTo(to)
   }
 
+  onMouseWheel(e) {
+    const currentScrollDelta = this.scrollBars.getScrollRight();
+    this.scrollBars.scrollRight(currentScrollDelta + e.deltaY);
+  }
+
   render() {
-    return (<Parallax className="container" ref="parallax" pages={4} horizontal="horizontal" scrolling={true}>
+    return (
+  
+    <Parallax onWheel={(e)=> this.onMouseWheel(e)} className="container" ref="parallax" pages={4} horizontal="false" scrolling={true}>
+      
       <Page offset={0} gradient="teal" className="roundMe" images={Me} caption="Hi!" first="My name is Michael..." second="*click or tap*" onClick={() => this.scroll(1)} />
-      <Page offset={1} gradient="greyf" caption="I am a media polymath" first="" second="" onClick={() => this.scroll(2)} />
-      <Page offset={2} gradient="black" images={Dep} caption="I create..." first="the web using these tools" second="" onClick={() => this.scroll(3)} />
-      <Page offset={3} gradient="teal" images={Media} caption="I create..." first="media using these tools" second="" onClick={() => this.scroll(0)} />
-    </Parallax>)
+      <Page offset={1} gradient="greyf" caption="I am a media polymath." first="I ideate, design, manage, and execute exciting media projects." second="" onClick={() => this.scroll(2)} />
+      <Page offset={2} gradient="black" images={Dep} caption="I create..." first="with these web frameworks" second="" onClick={() => this.scroll(3)} />
+      <Page offset={3} gradient="teal" images={Media} caption="I create..." first="with these media tools" second="" onClick={() => this.scroll(0)} />
+    </Parallax>
+
+    )
   }
 }

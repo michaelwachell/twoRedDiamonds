@@ -31,11 +31,13 @@ export default class Intro extends Component {
     this.Page = this.Page.bind(this)
   }
 
-  componentDidUpdate() {
+  componentDidMount() {
     setTimeout(() => {
-        window.dispatchEvent(new Event('resize'));
+      window.dispatchEvent(new Event('resize'));
     }, 0);
-}
+  }
+
+
 
   Page ({
     offset,
@@ -52,19 +54,19 @@ export default class Intro extends Component {
     return (
       <React.Fragment >
         <Parallax.Layer className="getBack" offset={offset} speed={0.2} >
-          <div className="circBegin getBack" />
+          <div className="circBegin-m getBack" />
         </Parallax.Layer>
   
   
         <Parallax.Layer className="getBack" offset={offset} speed={-0.2} >
-          <div className={`circEnd ${gradient}`} />
+          <div className={`circEnd-m ${gradient}`} />
         </Parallax.Layer>
   
   
   
-        <Parallax.Layer className="textm wrapword to-the-front" offset={offset} speed={0.4}>
+        <Parallax.Layer className="wrapword to-the-front textm" offset={offset} speed={0.4}>
   
-          <div>
+          <div >
             <div style={{ fontSize: "calc(3vw + 10%)" }}>{caption}</div>
             < div className="to-the-front" style={{ fontSize: "calc(1vw + 10%)", paddingLeft: "1%" }}>{first} </div>
           </div>
@@ -75,19 +77,19 @@ export default class Intro extends Component {
   
  
   
-        <Parallax.Layer className="arrow" height="10%" offset={offset} speed={0.8}  >
+        <Parallax.Layer className="arrow" height="10%" offset={offset} speed={0.8} onClick={()=> this.newScroll(offset, count)}  >
   
           <div className="arrow-img" ><img width="80%" src={Arrow} onClick={()=> this.newScroll(offset, count)} /></div>
   
   
   
         </Parallax.Layer>
-        <Parallax.Layer offset={offset} speed={0.8}>
+        <Parallax.Layer className="imagesM" offset={offset} speed={0.8}>
           
           {
-            images ? (<div className="imagesM"><a height="100px" href={url} target="_blank" > <img className="shadow" width="80%" src={images} /> </a></div>) 
+            images ? (<div ><a height="100px" href={url} target="_blank" > <img  width="80%" src={images} /> </a></div>) 
             : offset === 2 
-            ? (<div className="imagesM"> <iframe  width="85%" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/82297113&color=%231c2919&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe> </div>) 
+            ? (<div > <iframe  width="85%" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/82297113&color=%231c2919&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe> </div>) 
             : !images && offset===1 ? (<Nuka/>) 
             : null
           }

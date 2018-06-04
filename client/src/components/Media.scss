@@ -1,17 +1,23 @@
 
-
 .black {
   background: #005f89;
 }
 
 .teal {
   background: linear-gradient(to right, #0093b7 0%, #63cdd7 100%);
-  opacity: 0.75;
+  background: -webkit-linear-gradient(right, #0093b7, #63cdd7); // opacity: .75;
 }
 
 .greyf {
   background: linear-gradient(to bottom, #a0c5cf 60%, #e6eceb 100%);
+  background: -webkit-linear-gradient(bottom, #a0c5cf, #e6eceb);
 }
+
+.text-resize {
+  min-width: 80%;
+
+}
+
 
 .shadow {
   -webkit-box-shadow: 21px 14px 59px -4px rgba(0, 0, 0, 0.44);
@@ -23,8 +29,6 @@
   height: auto;
   z-index: 1000000000 !important;
 }
-
-
 
 .arrow-img {
   width: 3%;
@@ -44,20 +48,22 @@ img {
   z-index: 10000000000 !important;
 }
 
+.media-container {
+  background: radial-gradient(closest-side, transparent, #a0c5cf);
+  background: -webkit-linear-gradient(bottom, #a0c5cf, #63cdd7);
+}
 
-// div { 
-// border: 1px black solid
+div {
+border: 1px black solid
 
-// }
+}
 
 @media (min-width: 600px) {
-  .media-container {
-    background: radial-gradient(closest-side, transparent, #a0c5cf);
-  }
+
   .getBack {
     z-index: -10000000;
   }
-  .media-container>div>div {
+  .media-container > div > div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,38 +88,30 @@ img {
   .textm {
     width: 100%;
     line-height: calc(3vw + 10%);
-    max-width: 13vw;
+    max-width: 15vw;
     padding-left: 3px;
     min-width: 10vw;
     position: relative;
     left: 10%;
-    top: -1%;
+    // top: -1%;
     font-size: calc(45px + 20%);
     color: black;
-    
   }
   // .headerm {
 
   // }
-  .circBegin-m {
-    background-color: #0093b7;
-    clip-path: circle(30%);
-    overflow: visible;
-    position: relative;
-  }
-  .circEnd-m {
-    clip-path: circle(20%);
-    overflow: visible;
-    position: relative;
-    left: 25%;
-  }
+
   .circBegin-m {
     width: 100%;
     height: 100%;
     cursor: pointer;
-    position: relative;
     left: 30%;
     z-index: -1000;
+    background-color: #0093b7;
+    clip-path: circle(30%);
+    -webkit-clip-path: circle(30%);
+    overflow: visible;
+    position: relative;
   }
   .circEnd-m {
     width: 100%;
@@ -122,24 +120,28 @@ img {
     position: relative;
     z-index: -1000;
     cursor: pointer;
+    clip-path: circle(20%);
+    -webkit-clip-path: circle(20%);
+    left: 25%;
   }
   .imagesM {
     margin-left: 50%;
     width: 45%;
     height: auto;
     position: relative;
-    left: 5%;
-    top:-5%;
-    width: 100%;
+    // left: 5%;
+    // top: -5%;
     height: auto;
-    min-width: 450px;
+    min-width: 300px;
     min-height: 100px;
-    z-index: 10000000000 !important;
+    max-width: 500px;
+    z-index: 100000 !important;
   }
   .frame {
     position: relative;
-    left: 25%;
-   
+    // left: 23%;
+    min-width: 400px;
+
     z-index: 1000000000 !important;
   }
   .arrow {
@@ -152,30 +154,27 @@ img {
 }
 
 // END DESKTOP BP
-// 
-// 
+//
+//
 // END DESKTOP BP
 @media only screen and (max-width: 599px) {
-  .media-container {
-    background: radial-gradient(closest-side, transparent, #a0c5cf);
-  }
-  .media-container>div>div {
+
+  .media-container > div > div {
     display: flex;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
+    justify-content: center;
   }
   .textm {
     width: 100%;
     line-height: calc(3vw + 10%);
     max-width: 50%;
-    padding-left: 3px;
-    min-width: 20%;
+    min-width: 40%;
     text-align: center;
     position: relative;
     left: 24%;
-    top: 16%;
+    top: 13%;
     font-size: calc(100px + 20%);
     color: black;
     max-height: 200px;
@@ -184,27 +183,32 @@ img {
   }
 
   .circEnd-m {
-    clip-path: circle(20%);
-    overflow: visible;
-    position: relative;
     width: 100%;
     height: 100%;
+    text-align: center;
     overflow: visible;
-    position: relative;
     z-index: -1000;
     cursor: pointer;
-    top: -12%;
+    -webkit-clip-path: circle(20%);
+    overflow: visible;
+    position: relative;
+    // left: 25%
+    clip-path: circle(20%);
   }
 
   .circBegin-m {
     width: 100%;
     height: 100%;
-    cursor: pointer;
-    top: -15%;
+    top: -13%;
     position: relative;
     z-index: -1000;
     background-color: #0093b7;
+    overflow: visible;
+    position: relative;
+    cursor: pointer;
+    background-color: #0093b7;
     clip-path: circle(30%);
+    -webkit-clip-path: circle(30%);
     overflow: visible;
     position: relative;
   }
@@ -213,11 +217,12 @@ img {
     width: 45%;
     height: auto;
     position: relative;
-    left: 7%;
-    top: 35%;
+    // left: 7%;
+    top: -4%;
     height: auto;
     min-width: 400px;
     min-height: 100px;
+    text-align: center;
     z-index: 10000000000 !important;
   }
   .nested-img {
@@ -226,14 +231,14 @@ img {
   .frame {
     position: relative;
     left: 25%;
-    top: 40%;
+    top: 37%;
     z-index: 1000000000 !important;
     min-width: 400px;
   }
   .arrow {
     z-index: 1000000 !important;
     position: relative;
-    top: 24%;
+    top: 23%;
     width: 3%;
     max-height: 50px;
   }

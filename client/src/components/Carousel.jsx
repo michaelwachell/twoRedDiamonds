@@ -4,6 +4,14 @@ import './Carousel.scss';
 import Images from './Images.jsx'
 
 export default class Nuka extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state= {
+      
+    }
+  }
+  
+  
   afterSlide (currentSlide) {
     const list = window.document.querySelector('.slider-list');
     const nextSlide = list.childNodes[currentSlide];
@@ -16,7 +24,7 @@ export default class Nuka extends React.Component {
    
       <Carousel 
                 afterSlide={()=> this.afterSlide()}
-                width="65%"
+                width="75%"
                 className="carousel"             
                 cellAlign="center"
                 

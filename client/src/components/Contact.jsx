@@ -3,6 +3,10 @@ import ReactDom from 'react-dom';
 import { Component } from 'react';
 import './Contact.scss';
 import axios from 'axios';
+import Github from '../../../Assets/github.svg';
+import Linked from '../../../Assets/linked.png';
+
+
 
 export default class Contact extends Component {
 
@@ -58,9 +62,14 @@ export default class Contact extends Component {
             </div>
           </form>
         </div>
+      
         
       </div>
-
+      <div className="find-me" width="50%">
+     <div className="max-me" width="50%" align="center"> <a  href="https://github.com/michaelwachell" target="_blank"> <img width="50%"  src={Github}/> </a> </div>
+     <div className="max-me" width="50%" align="center"> <a  href="https://www.linkedin.com/in/mwachell
+" target="_blank"> <img width="50%" src={Linked}/> </a> </div>
+          </div>
     </div>)
   }
 }

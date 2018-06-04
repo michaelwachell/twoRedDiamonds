@@ -41,7 +41,7 @@ img {
 
 .nested-img {
   width: 20%;
-  z-index: 1000000 !important;
+  z-index: 100000000000000 !important;
 }
 
 .to-the-front {
@@ -90,7 +90,7 @@ img {
     line-height: calc(3vw + 10%);
     max-width: 15vw;
     padding-left: 3px;
-    min-width: 10vw;
+    min-width: 300px;
     position: relative;
     left: 10%;
     // top: -1%;
@@ -125,16 +125,16 @@ img {
     left: 25%;
   }
   .imagesM {
-    margin-left: 50%;
+
     width: 45%;
     height: auto;
     position: relative;
-    // left: 5%;
+    left: 45%;
     // top: -5%;
     height: auto;
     min-width: 300px;
     min-height: 100px;
-    max-width: 500px;
+    max-width: 60%;
     z-index: 100000 !important;
   }
   .frame {
@@ -179,7 +179,7 @@ img {
     color: black;
     max-height: 200px;
     align-self: center;
-    z-index: -1000000;
+    // z-index: 1000000;
   }
 
   .circEnd-m {
@@ -222,12 +222,13 @@ img {
     top: -4%;
     height: auto;
     min-width: 400px;
-    min-height: 100px;
+    min-height: 200px;
     text-align: center;
     z-index: 10000000000 !important;
   }
   .nested-img {
     max-width: 50px;
+    z-index: 1000000000 !important;
   }
   .frame {
     position: relative;
@@ -235,6 +236,8 @@ img {
     top: 37%;
     z-index: 1000000000 !important;
     min-width: 400px;
+    width: 100%;
+    
   }
   .arrow {
     z-index: 1000000 !important;

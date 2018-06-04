@@ -64,11 +64,11 @@ export default class Intro extends Component {
   
   
   
-        <Parallax.Layer className="wrapword to-the-front textm" offset={offset} speed={0.4}>
+        <Parallax.Layer className="wrapword textm" offset={offset} speed={0.4}>
   
-          <div >
-            <div style={{ fontSize: "calc(3vw + 10%)" }}>{caption}</div>
-            < div className="to-the-front" style={{ fontSize: "calc(1vw + 10%)", paddingLeft: "1%" }}>{first} </div>
+          <div width="100%">
+            <div width="100%" style={{ fontSize: "calc(3vw + 10%)" }}>{caption}</div>
+            < div width="100%" className="to-the-front" style={{ fontSize: "calc(1vw + 10%)", paddingLeft: "1%", minWidth: "100%" }}>{first} </div>
           </div>
   
   
@@ -89,7 +89,7 @@ export default class Intro extends Component {
           {
             images ? (<div ><a height="100px" href={url} target="_blank" > <img  width="80%" src={images} /> </a></div>) 
             : offset === 2 
-            ? (<div > <iframe  width="85%" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/82297113&color=%231c2919&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe> </div>) 
+            ? (<div width="100%" > <iframe  width="100%" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/82297113&color=%231c2919&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe> </div>) 
             : !images && offset===1 ? (<Nuka/>) 
             : null
           }

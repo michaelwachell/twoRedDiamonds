@@ -13,6 +13,10 @@
   background: -webkit-linear-gradient(bottom, #a0c5cf, #e6eceb);
 }
 
+.text-resize {
+  min-width: 80%;
+
+}
 
 
 .shadow {
@@ -49,10 +53,10 @@ img {
   background: -webkit-linear-gradient(bottom, #a0c5cf, #63cdd7);
 }
 
-// div {
-// border: 1px black solid
+div {
+border: 1px black solid
 
-// }
+}
 
 @media (min-width: 600px) {
 
@@ -127,16 +131,16 @@ img {
     position: relative;
     // left: 5%;
     // top: -5%;
-    width: 100%;
     height: auto;
-    min-width: 450px;
+    min-width: 300px;
     min-height: 100px;
     max-width: 500px;
-    z-index: 10000000000 !important;
+    z-index: 100000 !important;
   }
   .frame {
     position: relative;
-    left: 25%;
+    // left: 23%;
+    min-width: 400px;
 
     z-index: 1000000000 !important;
   }
@@ -166,11 +170,11 @@ img {
     width: 100%;
     line-height: calc(3vw + 10%);
     max-width: 50%;
-    min-width: 20%;
+    min-width: 40%;
     text-align: center;
     position: relative;
     left: 24%;
-    top: 15%;
+    top: 13%;
     font-size: calc(100px + 20%);
     color: black;
     max-height: 200px;
@@ -195,7 +199,7 @@ img {
   .circBegin-m {
     width: 100%;
     height: 100%;
-    top: -12%;
+    top: -13%;
     position: relative;
     z-index: -1000;
     background-color: #0093b7;
@@ -214,7 +218,7 @@ img {
     height: auto;
     position: relative;
     // left: 7%;
-    top: -3%;
+    top: -4%;
     height: auto;
     min-width: 400px;
     min-height: 100px;
@@ -227,7 +231,7 @@ img {
   .frame {
     position: relative;
     left: 25%;
-    top: 40%;
+    top: 37%;
     z-index: 1000000000 !important;
     min-width: 400px;
   }

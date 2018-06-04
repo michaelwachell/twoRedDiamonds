@@ -31,7 +31,6 @@ export default class Contact extends Component {
       console.log(err, 'here yo error')
     }
 
-    // window.open(`mailto:${this.state.email}?subject=${this.state.subject}&message=${this.state.message}`)
   }
 
   render() {

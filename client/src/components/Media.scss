@@ -50,13 +50,13 @@ img {
 
 .media-container {
   background: radial-gradient(closest-side, transparent, #a0c5cf);
-  background: -webkit-linear-gradient(bottom, #a0c5cf, #63cdd7);
+  background: -webkit-radial-gradient(center, transparent, #a0c5cf);
 }
 
-div {
-border: 1px black solid
+// div {
+// border: 1px black solid
 
-}
+// }
 
 @media (min-width: 600px) {
 
@@ -189,11 +189,12 @@ border: 1px black solid
     overflow: visible;
     z-index: -1000;
     cursor: pointer;
-    -webkit-clip-path: circle(20%);
+    -webkit-clip-path: circle(25%);
     overflow: visible;
     position: relative;
     // left: 25%
-    clip-path: circle(20%);
+    clip-path: circle(25%);
+    top: -7%;
   }
 
   .circBegin-m {

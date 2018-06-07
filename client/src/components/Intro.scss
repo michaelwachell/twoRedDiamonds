@@ -77,10 +77,11 @@
     pointer-events: none;
     justify-content: start !important;
     // font-family: "Kanit", sans-serif;
-
+    width: 100%;
     position: relative;
     top: 5%;
     display: flex;
+    max-width: 95%;
   }
   .slopeBegin,
   .slopeEnd {
@@ -88,6 +89,10 @@
     width: 140%;
     height: 100%;
     cursor: pointer;
+  }
+
+  .containMe {
+    max-width: 90%;
   }
 }
 

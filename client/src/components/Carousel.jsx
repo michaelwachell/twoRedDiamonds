@@ -31,10 +31,11 @@ export default class Nuka extends React.Component {
                 cellSpacing={300}
                 renderBottomCenterControls={()=> false}
                 wrapAround={true}
+                initial
                 >
         {
           Images.first.map((img, key) => {
-            return (<img  className="vis" src={img} key={key}/>)
+            return (<img  className="vis" src={img} key={key} onLoad={() => {window.dispatchEvent(new Event('resize'));}}/>)
           })
         }
       </Carousel>

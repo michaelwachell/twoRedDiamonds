@@ -195,6 +195,7 @@ img {
     // left: 25%
     clip-path: circle(25%);
     top: -7%;
+    display: none;
   }
 
   .circBegin-m {
@@ -212,6 +213,7 @@ img {
     -webkit-clip-path: circle(30%);
     overflow: visible;
     position: relative;
+    display: none;
   }
 
   .imagesM {

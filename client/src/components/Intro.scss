@@ -174,23 +174,13 @@
 
 .slopeBegin {
   background-color: #0093b7;
-  clip-path: polygon(15% 0%, 90% 0%, 65% 100%, 0% 100%);
-  -webkit-clip-path: polygon(15% 0%, 90% 0%, 65% 100%, 0% 100%);
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 
 .slopeEnd {
-  clip-path: polygon(
-    70% 0,
-    90% 0,
-    calc(100% - 10vw) 100%,
-    calc(70% - 20vw) 100%
-  );
-  -webkit-clip-path: polygon(
-    80% 0,
-    90% 0,
-    calc(100% - 20%) 100%,
-    calc(70% - 30%) 100%
-  );
+  -webkit-clip-path: polygon(25% 0%, 45% 0, 20% 100%, 0% 100%);
+  clip-path: polygon(25% 0%, 45% 0, 20% 100%, 0% 100%);
 }
 
 .black {
@@ -209,4 +199,8 @@
 
 .container {
   background: -webkit-linear-gradient(bottom, #a0c5cf, #63cdd7);
+}
+
+.text, .image-container {
+  z-index: 100000000;
 }

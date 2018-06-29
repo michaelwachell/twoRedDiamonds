@@ -31,11 +31,7 @@ export default class Intro extends Component {
     this.Page = this.Page.bind(this)
   }
 
-  componentDidMount() {
-    setTimeout(() => {
-      window.dispatchEvent(new Event('resize'));
-    }, 0);
-  }
+
 
 
 

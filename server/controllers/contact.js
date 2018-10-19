@@ -11,7 +11,6 @@ var mailer = require('nodemailer').createTransport({
 });
 
 const mailMan = (req, res) => {
-  console.log('here is req.body', req.body)
   mailer.sendMail({
     from: req.body.from,
     to: [CONTACT_ADDRESS],

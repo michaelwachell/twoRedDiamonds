@@ -25,6 +25,13 @@ const mediaFlex = {
   
 }
 
+const child = {
+  flex: "1 0 21%",
+  margin: "5px",
+  height: "100px",
+  backgroundColor: "teal",
+  color: "grey"
+}
 
 
 
@@ -34,67 +41,25 @@ const mediaFlex = {
 export default class Intro extends Component {
   constructor(props, context) {
     super(props, context)
-    this.state = {}
+    this.state = {
+      word: "is da rocking word"
+    }
 
   }
 
 
 
   render() {
+    let rows = []
+    for (let i = 0; i < 25; i++) { 
+      rows.push(<div class={child}>YOU BORK YOU LORK YOU ROCK YOU ROLL</div>)
+    }
+
     return (<div style={mediaFlex} >
-      <div>
-        Bork De Borksdfgsdfgdfgf
-  </div>
-  <div>
-        Bork De Borksdfgsdfgdfgf
-  </div>
-  <div>
-        Bork De Borksdfgsdfgdfgf
-  </div>
-  <div>
-        Bork De Borksdfgsdfgdfgf
-  </div>
-  <div>
-        Bork De Borksdfgsdfgdfgf
-  </div>
-  <div>
-        Bork De Borksdfgsdfgdfgf
-  </div>
-  <div>
-        Bork De Borksdfgsdfgdfgf
-  </div>
-  <div>
-        Bork De Borksdfgsdfgdfgf
-  </div>
-  <div>
-        Bork De Borksdfgsdfgdfgf
-  </div>
-  <div>
-        Bork De Borksdfgsdfgdfgf
-  </div>
-  <div>
-        Bork De Borksdfgsdfgdfgf
-  </div>
-  <div>
-        Bork De Borksdfgsdfgdfgf
-  </div>
-  <div>
-        Bork De Borksdfgsdfgdfgf
-  </div>
-  <div>
-        Bork De Borksdfgsdfgdfgf
-  </div>
-  <div>
-        Bork De Borksdfgsdfgdfgf
-  </div>
-   <div>
-        Bork De Borksdfgsdfgdfgf
-  </div>
-  <div>
-        Bork De Borksdfgsdfgdfgf
-  </div>
 
-
+    {rows}
+    {this.state.word}
+  
     </div>)
   }
 }

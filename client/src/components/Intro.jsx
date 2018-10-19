@@ -30,7 +30,7 @@ const Page = ({
 
       <Parallax.Layer className="text header wrapword" offset={offset} speed={0.4}>
 
-        <div>
+        <div className="containMe" >
 
           <p className="caption" style={{
             fontSize: "calc(8vw + 10%)",

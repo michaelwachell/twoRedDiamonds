@@ -77,10 +77,12 @@
     pointer-events: none;
     justify-content: start !important;
     // font-family: "Kanit", sans-serif;
-
+    width: 100%;
     position: relative;
     top: 5%;
     display: flex;
+    max-width: 95%;
+    text-shadow: 1px 4px 3px rgba(0,0,0,0.2);
   }
   .slopeBegin,
   .slopeEnd {
@@ -88,6 +90,10 @@
     width: 140%;
     height: 100%;
     cursor: pointer;
+  }
+
+  .containMe {
+    max-width: 90%;
   }
 }
 
@@ -156,6 +162,7 @@
     position: inherit;
     text-align: center;
     max-width: 80%;
+    text-shadow: 1px 4px 3px rgba(0,0,0,0.1);
   }
 
   .slopeBegin,
@@ -169,23 +176,13 @@
 
 .slopeBegin {
   background-color: #0093b7;
-  clip-path: polygon(15% 0%, 90% 0%, 65% 100%, 0% 100%);
-  -webkit-clip-path: polygon(15% 0%, 90% 0%, 65% 100%, 0% 100%);
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 
 .slopeEnd {
-  clip-path: polygon(
-    70% 0,
-    90% 0,
-    calc(100% - 10vw) 100%,
-    calc(70% - 20vw) 100%
-  );
-  -webkit-clip-path: polygon(
-    70% 0,
-    90% 0,
-    calc(100% - 10%) 100%,
-    calc(70% - 20%) 100%
-  );
+  -webkit-clip-path: polygon(25% 0%, 45% 0, 20% 100%, 0% 100%);
+  clip-path: polygon(25% 0%, 45% 0, 20% 100%, 0% 100%);
 }
 
 .black {
@@ -204,4 +201,8 @@
 
 .container {
   background: -webkit-linear-gradient(bottom, #a0c5cf, #63cdd7);
+}
+
+.text, .image-container {
+  z-index: 100000000;
 }

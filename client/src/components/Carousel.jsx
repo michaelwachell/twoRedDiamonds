@@ -23,19 +23,19 @@ export default class Nuka extends React.Component {
     return (
    
       <Carousel 
-                afterSlide={()=> this.afterSlide()}
+                afterSlide={(e)=> this.afterSlide(e)}
                 width="75%"
                 className="carousel"             
                 cellAlign="center"
-                
                 slideWidth={0.8}
                 cellSpacing={300}
                 renderBottomCenterControls={()=> false}
-             
+                wrapAround={true}
+                initial
                 >
         {
           Images.first.map((img, key) => {
-            return (<img  className="vis" src={img} key={key}/>)
+            return (<img  className="vis" src={img} key={key} onLoad={() => {window.dispatchEvent(new Event('resize'));}}/>)
           })
         }
       </Carousel>

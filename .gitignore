@@ -4,3 +4,4 @@ yarn.lock
 AWS
 environment.js
 client/public/bundle.js
+environment.txt

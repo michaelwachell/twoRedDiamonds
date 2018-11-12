@@ -13,16 +13,21 @@
 	text-align: center;
 	position: relative;
 	top:68%;
+	min-width: 300px;
 	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 	// justify-items: center;
 	justify-content: center;
 
 }
 
 .max-me {
-	max-width: 15vw;
+	max-width: 6vw;
+	min-width: 50px;
 	align-self: center;
 	text-align: center;
+	margin: 10px;
 	
 }
 

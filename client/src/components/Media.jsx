@@ -8,6 +8,7 @@ import Dep from '../../../Assets/coding_things.png'
 import Spot from '../../../Assets/spotifight.png'
 import Media from '../../../Assets/media_things.png'
 import Arrow from '../../../Assets/down-arrow.png'
+import TicTac from '../../../Assets/tictac.png'
 import Nuka from './Carousel.jsx'
 const QM = "https://78.media.tumblr.com/952e9b64a7c18c44256cc97271cfd025/tumblr_ou1jqjwnKg1ri5ljho1_r3_500.gif"
 
@@ -84,9 +85,9 @@ export default class Intro extends Component {
           
           {
             images ? (<div ><a height="100px" href={url} target="_blank" > <img  width="80%" src={images} /> </a></div>) 
-            : offset === 2 
+            : offset === 3 
             ? (<div width="100%" > <iframe  width="100%" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/82297113&color=%231c2919&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe> </div>) 
-            : !images && offset===1 ? (<Nuka/>) 
+            : !images && offset===2 ? (<Nuka/>) 
             : null
           }
   
@@ -110,10 +111,11 @@ export default class Intro extends Component {
 
   render() {
     return (<Parallax className="media-container" ref="parallax" pages={4} vertical="vertical" scrolling={true}>
-      <this.Page offset={0} newScroll={this.newScroll}  gradient="teal" className="roundMe" images={Spot} url="http://www.spotifight.us" caption="Spotifight.us" first={Copy.Spotifight()}  />
-      <this.Page offset={1} newScroll={this.newScroll}  gradient="greyf" caption="Visual" first={Copy.Visual()}  />
-      <this.Page offset={2} newScroll={this.newScroll}  gradient="greyf" caption="Composition" first={Copy.Comp()}  />
-      <this.Page offset={3} newScroll={this.newScroll} gradient="teal" caption="lwnmwr" images={QM} first={Copy.Lwn()}  />
+      <this.Page offset={0} newScroll={this.newScroll}  gradient="teal" className="roundMe" images={Spot} url="https://github.com/PupprPiper/SpotiFight" caption="Spotifight.us" first={Copy.Spotifight()}  />
+      <this.Page offset={1} newScroll={this.newScroll} images={TicTac} gradient="teal" caption="Vanilla Development" first={Copy.Tic()} url="/tictac/public/index.html" />
+      <this.Page offset={2} newScroll={this.newScroll}  gradient="greyf" caption="Visual" first={Copy.Visual()}  />
+      <this.Page offset={3} newScroll={this.newScroll}  gradient="greyf" caption="Composition" first={Copy.Comp()}  />
+      {/* <this.Page offset={4} newScroll={this.newScroll} gradient="teal" caption="lwnmwr" images={QM} first={Copy.Lwn()}  /> */}
     </Parallax>)
   }
 }

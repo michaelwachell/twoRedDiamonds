@@ -1,0 +1,122 @@
+
+
+h1 {
+  font-size: 2vw;
+  font-family: 'Pacifico', cursive;
+}
+
+h2 {
+  font-size: 1vw;
+  font-family: 'Pacifico', cursive;
+}
+
+.button {
+  background-color: white;
+  color:black;
+  cursor: pointer;
+  padding: 5px;
+  min-width: 5vw;
+  border: solid 1px black;
+  text-align: center;
+  outline: none;
+  font-size: 1vw;
+
+}
+
+body {
+  background: white;
+  font-family: 'Pacifico', cursive;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background: url('../assets/beach.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 47%;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: 10vw 10vw 10vw;
+  grid-gap: 0px;
+  justify-content: center;
+  margin-top: 2vw;
+  width: 100%;
+}
+
+#tic-tac-toe {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-direction: column;
+  text-align: center;
+}
+
+.player-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.piece {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 5vw;
+  min-width: 10vw;
+  min-height: 10vw;
+  max-width: 40vw;
+  max-height: 40vw;
+}
+
+.board div:nth-child(n+4) {
+  border-top: solid 2px black;
+}
+
+.board div:nth-child(3n+2) {
+  border-right: solid 2px black;
+  border-left: solid 2px black;
+}
+
+.player-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.player-form>div {
+  margin-bottom: 3vh;
+}
+
+.growUp {
+  -webkit-animation: growUp 1s;
+  animation: growUp 1s;
+}
+
+@keyframes growUp {
+  from {
+    font-size: 0;
+  }
+  to {
+    font-size: 5vw;
+  }
+}
+
+@-webkit-keyframes growUp {
+  from {
+    font-size: 0;
+    opacity: 0;
+  }
+  to {
+    font-size: 5vw;
+    opacity: 1;
+  }
+}
+
+.marginTopBottom {
+  margin: 1vw 0 1vw 0;
+}

@@ -1,0 +1,27 @@
+.cloud {
+  max-width: 400px;
+  min-width: 100px;
+  height: auto;
+  position: relative;
+  z-index: -1;
+  -webkit-animation: float 5s;
+  animation: float 5s;
+}
+
+@keyframes float {
+  0% {
+    transform: translate3D(0 0 0);
+  }
+  100% {
+    transform: translate3D(500px 0 0);
+  }
+}
+
+@-webkit-keyframes float {
+  0% {
+    transform: translate3D(0 0 0);
+  }
+  100% {
+    transform: translate3D(500px 0 0);
+  }
+}

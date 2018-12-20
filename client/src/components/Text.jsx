@@ -8,6 +8,7 @@ module.exports = {
   Visual: () => { return ( <p >See and move.</p>) },
   Comp: () => { return (<p> Sounds, loud and soft.</p>) },
   Lwn: () => { return (<p>Coming soon...</p>) },
+  Tic: () => { return (<p>Who needs a framework? Enjoy this relaxing (100% vanilla JS/CSS/HTML) version of a "fun" classic</p>) },
 
 
 
